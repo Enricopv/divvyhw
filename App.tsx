@@ -29,7 +29,7 @@ const App = () => {
 
       <Text>Testing Divvy HW</Text>
 
-      <LineGraph style={{width: "100%", height: 100}}/>
+      <LineGraph data={[]} width="100%" height={400}/>
     </SafeAreaView>
   );
 };
