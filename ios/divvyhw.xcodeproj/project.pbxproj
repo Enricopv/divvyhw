@@ -14,6 +14,8 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		358B58D12846D56F00C3F366 /* libCharts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 358B58D02846D56F00C3F366 /* libCharts.a */; };
 		358B58D32846D57300C3F366 /* libTinyConstraints.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 358B58D22846D57300C3F366 /* libTinyConstraints.a */; };
+		358B58D62846D7E300C3F366 /* LineGraphViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358B58D52846D7E300C3F366 /* LineGraphViewManager.swift */; };
+		358B58D82846D89700C3F366 /* LineGraphViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 358B58D72846D89700C3F366 /* LineGraphViewManager.m */; };
 		7699B88040F8A987B510C191 /* libPods-divvyhw-divvyhwTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-divvyhw-divvyhwTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -41,6 +43,9 @@
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-divvyhw-divvyhwTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-divvyhw-divvyhwTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		358B58D02846D56F00C3F366 /* libCharts.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libCharts.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		358B58D22846D57300C3F366 /* libTinyConstraints.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libTinyConstraints.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		358B58D42846D7E300C3F366 /* divvyhw-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "divvyhw-Bridging-Header.h"; sourceTree = "<group>"; };
+		358B58D52846D7E300C3F366 /* LineGraphViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineGraphViewManager.swift; sourceTree = "<group>"; };
+		358B58D72846D89700C3F366 /* LineGraphViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LineGraphViewManager.m; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-divvyhw.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-divvyhw.debug.xcconfig"; path = "Target Support Files/Pods-divvyhw/Pods-divvyhw.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-divvyhw.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-divvyhw.release.xcconfig"; path = "Target Support Files/Pods-divvyhw/Pods-divvyhw.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-divvyhw-divvyhwTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-divvyhw-divvyhwTests.debug.xcconfig"; path = "Target Support Files/Pods-divvyhw-divvyhwTests/Pods-divvyhw-divvyhwTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -94,10 +99,13 @@
 			children = (
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
+				358B58D72846D89700C3F366 /* LineGraphViewManager.m */,
+				358B58D52846D7E300C3F366 /* LineGraphViewManager.swift */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				358B58D42846D7E300C3F366 /* divvyhw-Bridging-Header.h */,
 			);
 			name = divvyhw;
 			sourceTree = "<group>";
@@ -215,7 +223,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1340;
 					};
 				};
 			};
@@ -419,6 +427,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
+				358B58D82846D89700C3F366 /* LineGraphViewManager.m in Sources */,
+				358B58D62846D7E300C3F366 /* LineGraphViewManager.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,6 +448,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-divvyhw-divvyhwTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -465,6 +476,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-divvyhw-divvyhwTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = divvyhwTests/Info.plist;
@@ -505,6 +517,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = divvyhw;
+				SWIFT_OBJC_BRIDGING_HEADER = "divvyhw-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -530,6 +543,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = divvyhw;
+				SWIFT_OBJC_BRIDGING_HEADER = "divvyhw-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
