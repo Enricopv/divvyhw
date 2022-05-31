@@ -19,6 +19,9 @@ target 'divvyhw' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
+  pod 'Charts'
+  pod 'TinyConstraints'
+
   target 'divvyhwTests' do
     inherit! :complete
     # Pods for testing
