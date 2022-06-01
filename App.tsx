@@ -58,7 +58,6 @@ const MainScreen = () => {
           { x: 2.0, y: 18 },
           { x: 3.0, y: 15 },
           { x: 4.0, y: 22 },
-          { x: 5.0, y: 10 },
         ]}
         style={styles.graph}
       />
@@ -67,7 +66,7 @@ const MainScreen = () => {
 };
 
 const styles = StyleSheet.create({
-  graph: { width: '100%', height: 400, backgroundColor: 'dodgerblue' },
+  graph: { width: '100%', height: 400, },
 });
 
 export default App;
