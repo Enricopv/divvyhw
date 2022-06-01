@@ -37,7 +37,6 @@ class LineGraphView: UIView, ChartViewDelegate {
     lineChartView.centerInSuperview()
     lineChartView.width(to: self)
     lineChartView.height(to: self)
-//    setData()
   }
   
   required init?(coder aDecoder: NSCoder) {
@@ -47,7 +46,6 @@ class LineGraphView: UIView, ChartViewDelegate {
   lazy var lineChartView: LineChartView = {
     let chartView = LineChartView()
    
-    chartView.backgroundColor = .systemBlue
     chartView.rightAxis.enabled = false
     let yAxis = chartView.leftAxis
     
@@ -62,24 +60,7 @@ class LineGraphView: UIView, ChartViewDelegate {
     return chartView
   }()
   
-  func setData() {
-
-    let chartData: [ChartDataEntry] = [
-       ChartDataEntry(x: 0.0, y: 10.0),
-       ChartDataEntry(x: 1.0, y: 12.0),
-       ChartDataEntry(x: 2.0, y: 16.0),
-       ChartDataEntry(x: 3.0, y: 11.0)
-     ]
-
-    let dataSet = LineChartDataSet(entries: chartData, label: "Revenue")
-    let nextEntry = ChartDataEntry.init(x: 4.0, y: 15.0)
-
-    dataSet.append(nextEntry)
-
-    let lineData = LineChartData(dataSet: dataSet)
-
-    lineChartView.data = lineData
-  }
+ 
 
   
 }

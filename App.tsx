@@ -9,7 +9,13 @@
  */
 
 import React from 'react';
-import { SafeAreaView, StatusBar, Text, useColorScheme } from 'react-native';
+import {
+  SafeAreaView,
+  StatusBar,
+  Text,
+  useColorScheme,
+  StyleSheet,
+} from 'react-native';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import { LineGraph } from './src/lib';
 
@@ -38,10 +44,14 @@ const App = () => {
           { x: 4.0, y: 22 },
           { x: 5.0, y: 10 },
         ]}
-        style={{ width: '100%', height: 400 }}
+        style={styles.graph}
       />
     </SafeAreaView>
   );
 };
+
+const styles = StyleSheet.create({
+  graph: { width: '100%', height: 400, backgroundColor: 'dodgerblue' },
+});
 
 export default App;
