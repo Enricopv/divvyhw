@@ -8,8 +8,8 @@
  * @format
  */
 
-import {requireNativeComponent} from 'react-native';
+import { requireNativeComponent } from 'react-native';
 
-const LineGraph = requireNativeComponent('LineGraphView');
+const NativeLineGraph = requireNativeComponent('LineGraphView');
 
-export default LineGraph;
+export { NativeLineGraph };

@@ -24,12 +24,22 @@ const App = () => {
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
+    <SafeAreaView style={backgroundStyle} height={100}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
 
       <Text>Testing Divvy HW</Text>
 
-      <LineGraph data={[]} width="100%" height={400}/>
+      <LineGraph
+        data={[
+          { x: 0.0, y: 10 },
+          { x: 1.0, y: 12 },
+          { x: 2.0, y: 18 },
+          { x: 3.0, y: 15 },
+          { x: 4.0, y: 22 },
+          { x: 5.0, y: 10 },
+        ]}
+        style={{ width: '100%', height: 400 }}
+      />
     </SafeAreaView>
   );
 };

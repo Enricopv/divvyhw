@@ -15,7 +15,18 @@ class LineGraphView: UIView, ChartViewDelegate {
   
   @objc var data: NSArray = [] {
     didSet {
-      print("DATA FROM TSX: ", data)
+      let chartData = LineChartDataSet(entries: [], label: "Revenue")
+      
+      
+      if let parsedData = data as? [Dictionary<String,Double>] {
+        parsedData.forEach { point in
+         let entry = ChartDataEntry.init(x: point["x"]!, y: point["y"]!)
+          chartData.append(entry)
+        }
+        
+        lineChartView.data = LineChartData(dataSet: chartData)
+        
+      }
     }
   }
   
@@ -26,7 +37,7 @@ class LineGraphView: UIView, ChartViewDelegate {
     lineChartView.centerInSuperview()
     lineChartView.width(to: self)
     lineChartView.height(to: self)
-    setData()
+//    setData()
   }
   
   required init?(coder aDecoder: NSCoder) {
