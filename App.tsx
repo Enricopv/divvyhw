@@ -15,6 +15,7 @@ import {
   Text,
   useColorScheme,
   StyleSheet,
+  ViewStyle,
 } from 'react-native';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import { LineGraph } from './src/lib';
@@ -37,7 +38,7 @@ const App = () => {
 const MainScreen = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
-  const backgroundStyle = {
+  const backgroundStyle: ViewStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
     flex: 1,
     justifyContent: 'center',
@@ -45,7 +46,7 @@ const MainScreen = () => {
   };
 
   return (
-    <SafeAreaView style={backgroundStyle} height={100}>
+    <SafeAreaView style={backgroundStyle}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
 
       <Text>Testing Divvy HW</Text>
