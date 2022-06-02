@@ -1,72 +1,37 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * Generated with the TypeScript template
- * https://github.com/react-native-community/react-native-template-typescript
- *
- * @format
- */
-
-import React from 'react';
-import {
-  SafeAreaView,
-  StatusBar,
-  Text,
-  useColorScheme,
-  StyleSheet,
-  ViewStyle,
-} from 'react-native';
-import { Colors } from 'react-native/Libraries/NewAppScreen';
-import { LineGraph } from './src/lib';
-
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import React from 'react';
+import AllowanceScreen from './src/screens/AllowanceScreen';
+import CompaniesStack from './src/screens/Companies';
+import CompareScreen from './src/screens/CompareScreen';
+import { RootParamList } from './src/types';
 
-const Stack = createNativeStackNavigator();
+
+
+const Tab = createBottomTabNavigator<RootParamList>();
 
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Main" component={MainScreen} />
-      </Stack.Navigator>
+      <Tab.Navigator>
+        <Tab.Screen
+          name="Companies"
+          component={CompaniesStack}
+          options={{ headerShown: false }}
+        />
+        <Tab.Screen
+          name="Compare"
+          component={CompareScreen}
+          options={{ headerShown: false }}
+        />
+        <Tab.Screen
+          name="Allowance"
+          component={AllowanceScreen}
+          options={{ headerShown: false }}
+        />
+      </Tab.Navigator>
     </NavigationContainer>
   );
 };
-
-const MainScreen = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle: ViewStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  };
-
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-
-      <Text>Testing Divvy HW</Text>
-
-      <LineGraph
-        data={[
-          { x: 0.0, y: 10 },
-          { x: 1.0, y: 12 },
-          { x: 2.0, y: 18 },
-          { x: 3.0, y: 15 },
-          { x: 4.0, y: 22 },
-        ]}
-        style={styles.graph}
-      />
-    </SafeAreaView>
-  );
-};
-
-const styles = StyleSheet.create({
-  graph: { width: '100%', height: 400, },
-});
 
 export default App;
