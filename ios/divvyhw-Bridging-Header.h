@@ -8,3 +8,7 @@
 
 @interface LineGraphViewManager : NSObject <RCTBridgeModule>
 @end
+
+
+@interface CompanyGraphViewManager : NSObject <RCTBridgeModule>
+@end

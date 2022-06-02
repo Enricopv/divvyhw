@@ -9,8 +9,8 @@ import {
   View,
 } from 'react-native';
 import data from '../../data.json';
-import { LineGraph } from '../../lib';
-import { RootParamList } from '../../types';
+import { CompanyGraph } from '../../lib';
+import { CompanyProps, RootParamList } from '../../types';
 
 const { width: screenWidth } = Dimensions.get('window');
 
@@ -25,7 +25,9 @@ const CompanyDetailScreen = ({
 }: CompanyDetailScreenProps) => {
   console.log(route.params.id);
 
-  const companyData = data.find(item => item.id === route.params.id);
+  const companyData = data.find(
+    item => item.id === route.params.id,
+  ) as CompanyProps;
 
   const onBackPress = () => {
     navigation.goBack();
@@ -40,18 +42,9 @@ const CompanyDetailScreen = ({
       </View>
       <View style={styles.titleContainer}>
         <Text style={styles.title}>{companyData?.name}</Text>
-        <View>
-          <LineGraph
-            style={styles.graph}
-            data={[
-              { x: 0.0, y: 10 },
-              { x: 1.0, y: 12 },
-              { x: 2.0, y: 18 },
-              { x: 3.0, y: 15 },
-              { x: 4.0, y: 22 },
-            ]}
-          />
-        </View>
+      </View>
+      <View>
+        <CompanyGraph style={styles.graph} data={companyData} />
       </View>
     </SafeAreaView>
   );
@@ -60,7 +53,7 @@ const CompanyDetailScreen = ({
 const styles = StyleSheet.create({
   graph: {
     width: screenWidth,
-    height: screenWidth * .75,
+    height: screenWidth * 0.75,
   },
   center: {
     flex: 1,
