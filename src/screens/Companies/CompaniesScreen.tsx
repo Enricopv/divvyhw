@@ -45,6 +45,7 @@ const CompaniesScreen = ({ navigation }: CompaniesScreenProps) => {
   return (
     <SafeAreaView style={styles.main}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+      <Text style={{ fontSize: 24, fontWeight: 'bold', paddingBottom: 12 }}>Companies List</Text>
       <FlatList
         data={data}
         style={styles.scrollView}
@@ -67,8 +68,10 @@ const CompanyItem = (props: CompanyItemProps) => {
     <Pressable onPress={props.onPress}>
       <View style={styles.shadow}>
         <View style={styles.companyContainer}>
-          <View style={{ flexGrow: 1 }}>
-            <Text style={{ fontSize: 18 }}>{props.name}</Text>
+          <View style={{ flexGrow: 1, justifyContent: 'center' }}>
+            <Text style={{ fontSize: 18, fontWeight: 'bold' }}>
+              {props.name}
+            </Text>
             <Text style={{ fontSize: 14, color: 'gray' }}>
               {props.location?.city}, {props.location?.country}
             </Text>
@@ -159,6 +162,7 @@ const styles = StyleSheet.create({
   graph: {
     width: width * 0.2,
     height: width * 0.2,
+
     borderRadius: 4,
     shadowColor: 'black',
     shadowOpacity: 0.3,
@@ -173,11 +177,9 @@ const styles = StyleSheet.create({
   companyContainer: {
     width: width * 0.9,
     flexDirection: 'row',
-    borderColor: 'black',
-    borderWidth: 1,
-    marginTop: 8,
-    padding: 4,
-    borderRadius: 8,
+    borderBottomColor: 'rgba(0,0,0,0.2)',
+    borderBottomWidth: 1,
+    paddingHorizontal: 8,
     shadowOpacity: 0,
   },
   shadow: {

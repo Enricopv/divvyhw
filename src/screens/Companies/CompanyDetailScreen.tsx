@@ -95,14 +95,14 @@ const RevenueItem = (props: {
   value: number;
   isLast: boolean;
 }) => {
+  const viewStyle = {
+    ...styles.revenueItem,
+    borderBottomColor: !props.isLast ? 'rgba(0,0,0,0.3)' : undefined,
+    borderBottomWidth: !props.isLast ? 1 : undefined,
+  };
+
   return (
-    <View
-      style={{
-        ...styles.revenueItem,
-        borderBottomColor: !props.isLast && 'rgba(0,0,0,0.3)',
-        borderBottomWidth: !props.isLast && 1,
-      }}
-      key={props.seq}>
+    <View style={viewStyle} key={props.seq}>
       <View style={styles.monthText}>
         <Text style={{ fontSize: 20 }}>
           {dateFns.format(new Date(props.date.substring(0, 10)), 'MMM')}
@@ -112,10 +112,19 @@ const RevenueItem = (props: {
           {dateFns.format(new Date(props.date.substring(0, 10)), 'yy')}
         </Text>
       </View>
-      <Text style={{ fontSize: 24 }}>${props.value}</Text>
+      <Text style={{ fontSize: 24 }}>{formatter.format(props.value)}</Text>
     </View>
   );
 };
+
+const formatter = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+
+  // These options are needed to round to whole numbers if that's what you want.
+  //minimumFractionDigits: 0, // (this suffices for whole numbers, but will print 2500.10 as $2,500.1)
+  //maximumFractionDigits: 0, // (causes 2500.99 to be printed as $2,501)
+});
 
 const styles = StyleSheet.create({
   graph: {
@@ -139,7 +148,7 @@ const styles = StyleSheet.create({
   },
   revenueItem: {
     flexDirection: 'row',
-    paddingVertical: 8,
+    paddingVertical: 12,
   },
   revenueTitle: {
     fontSize: 20,
