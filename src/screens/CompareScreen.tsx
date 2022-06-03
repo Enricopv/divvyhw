@@ -22,12 +22,18 @@ type CompanyDetailScreenProps = NativeStackScreenProps<
   'CompanyDetail'
 >;
 
+const randomColor = () => Math.floor(Math.random() * 16777215).toString(16);
+const compData = dataJSON.map(item => ({
+  ...item,
+  color: `#${randomColor()}`,
+}));
+
 const CompareScreen = ({ navigation }: CompanyDetailScreenProps) => {
-  const companyData = dataJSON.find(item => item.id === 1) as CompanyProps;
+  const companyData = compData.find(item => item.id === 1) as CompanyProps;
 
   const [selected, setSelected] = React.useState<number[]>([]);
 
-  const selectedCompanies = dataJSON.filter(item =>
+  const selectedCompanies = compData.filter(item =>
     selected.find(sel => sel === item.id),
   );
 
@@ -38,7 +44,7 @@ const CompareScreen = ({ navigation }: CompanyDetailScreenProps) => {
   const data = selectedCompanies.map(item => ({
     ...item,
     graphOptions: {
-      color: '#189E6C',
+      color: item.color,
     },
   }));
 
@@ -70,11 +76,19 @@ const CompareScreen = ({ navigation }: CompanyDetailScreenProps) => {
     <SafeAreaView style={styles.center}>
       <ScrollView>
         <CompanyGraph style={styles.graph} data={data} legendEnabled={false} />
+        {!selected.length && (
+          <View style={{ justifyContent: 'center' }}>
+            <TitleText style={{ textAlign: 'center' }}>
+              Use the "+" above to add a company!
+            </TitleText>
+          </View>
+        )}
+
         <View style={styles.alignCenter}>
           {data.map(item => (
             <View key={item.id} style={styles.companyContainer}>
               <View style={styles.title}>
-                <View style={styles.dot} />
+                <View style={{ ...styles.dot, backgroundColor: item.color }} />
                 <TitleText>{item.name}</TitleText>
               </View>
               <Pressable onPress={onRemove(item.id)}>
