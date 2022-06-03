@@ -13,16 +13,8 @@ const Stack = createNativeStackNavigator<CompaniesStackParamList>();
 const CompaniesStack = () => {
   return (
     <Stack.Navigator>
-      <Stack.Screen
-        // options={{ headerShown: false }}
-        name="CompaniesScreen"
-        component={CompaniesScreen}
-      />
-      <Stack.Screen
-        name="CompanyDetail"
-        component={CompanyDetailScreen}
-        // options={{ headerShown: false }}
-      />
+      <Stack.Screen name="CompaniesScreen" component={CompaniesScreen} />
+      <Stack.Screen name="CompanyDetail" component={CompanyDetailScreen} />
     </Stack.Navigator>
   );
 };

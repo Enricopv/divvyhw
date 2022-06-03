@@ -30,6 +30,7 @@ type CompaniesScreenProps = NativeStackScreenProps<RootParamList, 'Compare'>;
 
 const CompanySearch = ({ navigation, route }: CompaniesScreenProps) => {
   const [searchText, setSearchText] = React.useState('');
+
   const ids = route?.params?.ids || [];
 
   const results = dataJSON

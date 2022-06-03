@@ -68,6 +68,12 @@ const CompanyDetailScreen = ({
     },
   ];
 
+  const onValueTouch = (e: { nativeEvent: { x: number; y: number } }) => {
+    const seq = e.nativeEvent.x / 100;
+    const key = [5, 4, 3, 2, 1, 0];
+    setSelectedSeq(key[seq]);
+  };
+
   return (
     <SafeAreaView style={styles.center}>
       <ScrollView>
@@ -75,15 +81,7 @@ const CompanyDetailScreen = ({
           <CompanyGraph
             style={styles.graph}
             data={data}
-            onValueTouch={e => {
-              console.log('X: ', e.nativeEvent.x, 'Y: ', e.nativeEvent.y);
-
-              const seq = e.nativeEvent.x / 100;
-
-              const key = [5, 4, 3, 2, 1, 0];
-
-              setSelectedSeq(key[seq]);
-            }}
+            onValueTouch={onValueTouch}
           />
         </View>
         <View style={styles.revenueContainer}>
