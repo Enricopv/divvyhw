@@ -12,8 +12,9 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		357889992849C3AD0052BFC7 /* libReact-Core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 357889982849C3AD0052BFC7 /* libReact-Core.a */; };
+		3578899B2849C3C70052BFC7 /* libTinyConstraints.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3578899A2849C3C70052BFC7 /* libTinyConstraints.a */; };
 		358B58D12846D56F00C3F366 /* libCharts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 358B58D02846D56F00C3F366 /* libCharts.a */; };
-		358B58D32846D57300C3F366 /* libTinyConstraints.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 358B58D22846D57300C3F366 /* libTinyConstraints.a */; };
 		358B58D62846D7E300C3F366 /* LineGraphViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358B58D52846D7E300C3F366 /* LineGraphViewManager.swift */; };
 		358B58D82846D89700C3F366 /* LineGraphViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 358B58D72846D89700C3F366 /* LineGraphViewManager.m */; };
 		358B58DA2846DD8300C3F366 /* LineGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358B58D92846DD8300C3F366 /* LineGraphView.swift */; };
@@ -45,6 +46,8 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = divvyhw/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = divvyhw/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-divvyhw-divvyhwTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-divvyhw-divvyhwTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		357889982849C3AD0052BFC7 /* libReact-Core.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-Core.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3578899A2849C3C70052BFC7 /* libTinyConstraints.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libTinyConstraints.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		358B58D02846D56F00C3F366 /* libCharts.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libCharts.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		358B58D22846D57300C3F366 /* libTinyConstraints.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libTinyConstraints.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		358B58D42846D7E300C3F366 /* divvyhw-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "divvyhw-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -77,7 +80,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				358B58D12846D56F00C3F366 /* libCharts.a in Frameworks */,
-				358B58D32846D57300C3F366 /* libTinyConstraints.a in Frameworks */,
+				357889992849C3AD0052BFC7 /* libReact-Core.a in Frameworks */,
+				3578899B2849C3C70052BFC7 /* libTinyConstraints.a in Frameworks */,
 				0C80B921A6F3F58F76C31292 /* libPods-divvyhw.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -120,6 +124,8 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3578899A2849C3C70052BFC7 /* libTinyConstraints.a */,
+				357889982849C3AD0052BFC7 /* libReact-Core.a */,
 				358B58D22846D57300C3F366 /* libTinyConstraints.a */,
 				358B58D02846D56F00C3F366 /* libCharts.a */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,

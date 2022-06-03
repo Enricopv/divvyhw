@@ -1,7 +1,7 @@
 export interface CompanyProps {
   id: number;
   name: string;
-  location: { address: string; city: string; country: string };
+  location?: { address: string; city: string; country: string };
   revenue: { seq: number; date: string; value: number }[];
 }
 
@@ -10,5 +10,8 @@ export type RootParamList = {
   Compare: undefined;
   Allowance: undefined;
   CompaniesScreen: undefined;
-  CompanyDetail: { id: number };
+  CompanyDetail: {
+    id: number;
+    averages: { seq: number; date: string; value: number }[];
+  };
 };

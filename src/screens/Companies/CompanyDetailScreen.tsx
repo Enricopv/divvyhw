@@ -25,8 +25,6 @@ const CompanyDetailScreen = ({
   navigation,
   route,
 }: CompanyDetailScreenProps) => {
-  console.log(route.params.id);
-
   const companyData = data.find(
     item => item.id === route.params.id,
   ) as CompanyProps;
@@ -47,7 +45,27 @@ const CompanyDetailScreen = ({
           <Text style={styles.title}>{companyData?.name}</Text>
         </View>
         <View>
-          <CompanyGraph style={styles.graph} data={companyData} />
+          <CompanyGraph
+            style={styles.graph}
+            data={[
+              {
+                ...companyData,
+                graphOptions: {
+                  drawFilledEnabled: true,
+                  color:
+                    companyData.revenue[0].value < companyData.revenue[5].value
+                      ? '#189E6C'
+                      : '#F70000',
+                },
+              },
+              {
+                id: 1090,
+                name: 'Average',
+                revenue: route.params.averages,
+                graphOptions: { drawFilledEnabled: false, color: '#1D8BF7' },
+              },
+            ]}
+          />
         </View>
         <View style={{ alignItems: 'center' }}>
           <View style={{ width: screenWidth * 0.9 }}>

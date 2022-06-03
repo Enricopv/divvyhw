@@ -6,5 +6,16 @@ export interface LineGraphProps extends ViewProps {
 }
 
 export interface CompanyGraphProps extends ViewProps {
-  data?: CompanyProps;
+  data?: (CompanyProps & DataOptions)[];
+  yAxisEnabled?: boolean;
+  xAxisEnabled?: boolean;
+  drawValues?: boolean;
 }
+
+type DataOptions = {
+  graphOptions?: {
+    drawFilledEnabled?: boolean;
+    drawCirclesEnabled?: boolean;
+    color?: string;
+  };
+};
