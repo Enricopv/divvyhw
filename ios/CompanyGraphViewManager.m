@@ -6,4 +6,5 @@
   RCT_EXPORT_VIEW_PROPERTY(data2, NSArray)
   RCT_EXPORT_VIEW_PROPERTY(yAxisEnabled, NSNumber)
   RCT_EXPORT_VIEW_PROPERTY(xAxisEnabled, NSNumber)
+  RCT_EXPORT_VIEW_PROPERTY(legendEnabled, NSNumber)
 @end

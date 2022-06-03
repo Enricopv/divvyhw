@@ -45,7 +45,7 @@ const CompaniesScreen = ({ navigation }: CompaniesScreenProps) => {
   React.useLayoutEffect(() => {
     navigation.setOptions({
       title: 'Companies List',
-      headerTitleStyle: { fontFamily: 'Test Calibre' },
+      headerTitleStyle: { fontFamily: 'Test Calibre', fontSize: 18 },
     });
   }, [navigation]);
 
@@ -97,6 +97,7 @@ const CompanyItem = (props: CompanyItemProps) => {
               style={styles.graph}
               yAxisEnabled={false}
               xAxisEnabled={false}
+              legendEnabled={false}
               data={[
                 {
                   ...props,

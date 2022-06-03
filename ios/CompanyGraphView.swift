@@ -111,6 +111,8 @@ class CompanyGraphView: UIView, ChartViewDelegate {
           
           let chartColor = hexStringToUIColor(hex: color)
           
+          chartData.label = dataSet["name"] != nil ? dataSet["name"] as! String : ""
+          
           chartData.setColor(chartColor)
           chartData.lineWidth = 2.0
           chartData.mode = .cubicBezier
@@ -164,6 +166,14 @@ class CompanyGraphView: UIView, ChartViewDelegate {
     }
   }
   
+  @objc var legendEnabled: NSNumber = 1 {
+    didSet {
+      lineChartView.legend.enabled = Bool(truncating: legendEnabled)
+      lineChartView.notifyDataSetChanged()
+    }
+  }
+  
+  
   
   
   lazy var lineChartView: LineChartView = {
@@ -188,7 +198,7 @@ class CompanyGraphView: UIView, ChartViewDelegate {
     chartView.xAxis.labelPosition = .bottom
     chartView.drawGridBackgroundEnabled = false
     
-    chartView.legend.enabled = false
+    chartView.legend.enabled = true
     
     
     

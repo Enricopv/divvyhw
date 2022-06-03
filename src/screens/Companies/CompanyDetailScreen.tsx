@@ -36,7 +36,7 @@ const CompanyDetailScreen = ({
     };
 
     navigation.setOptions({
-      headerTitleStyle: { fontFamily: 'Test Calibre' },
+      headerTitleStyle: { fontFamily: 'Test Calibre', fontSize: 18 },
       title: companyData.name,
       headerBackButtonMenuEnabled: false,
       headerLeft: () => (
@@ -115,7 +115,7 @@ const RevenueItem = (props: {
         </Text>
         <Text style={styles.yearText}>
           {' '}
-          {dateFns.format(new Date(props.date.substring(0, 10)), 'yy')}
+          '{dateFns.format(new Date(props.date.substring(0, 10)), 'yy')}
         </Text>
       </View>
       <Text style={{ fontSize: 18, fontFamily: 'Roboto Mono' }}>

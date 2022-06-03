@@ -9,7 +9,7 @@ export interface CompanyGraphProps extends ViewProps {
   data?: (CompanyProps & DataOptions)[];
   yAxisEnabled?: boolean;
   xAxisEnabled?: boolean;
-  drawValues?: boolean;
+  legendEnabled?: boolean;
 }
 
 type DataOptions = {
@@ -17,5 +17,6 @@ type DataOptions = {
     drawFilledEnabled?: boolean;
     drawCirclesEnabled?: boolean;
     color?: string;
+    drawValuesEnabled?: boolean;
   };
 };
