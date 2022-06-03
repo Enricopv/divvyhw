@@ -12,7 +12,7 @@ import TinyConstraints
 
 class XAxisFormatter : IAxisValueFormatter {
   
-  let months: Dictionary<Double,String> = [0: "Oct",100: "Nov", 200: "Dec", 300: "Jan", 400: "Feb", 500: "Mar"]
+  let months: Dictionary<Double,String> = [0: "Oct", 100: "Nov", 200: "Dec", 300: "Jan", 400: "Feb", 500: "Mar"]
   
   func stringForValue(_ value: Double, axis: AxisBase?) -> String {
     return months[value] ?? String(value)
@@ -42,49 +42,43 @@ class YAxisFormatter : IAxisValueFormatter {
 class CompanyGraphView: UIView, ChartViewDelegate {
   
   
-
+  override init(frame: CGRect) {
+    super.init(frame: frame)
+    
+    self.addSubview(lineChartView)
+    lineChartView.centerInSuperview()
+    lineChartView.width(to: self)
+    lineChartView.height(to: self)
+  }
   
-//  @objc var data: NSDictionary = [:] {
-//      didSet {
-//        let chartData = LineChartDataSet(entries: [], label: "Revenue")
-//
-//        let pData = data as! Dictionary<String, Any>
-//        let revenue = pData["revenue"] as! [Dictionary<String, Any>]
-//
-//        var i = 0.00
-//        revenue.forEach{ period in
-//
-//          let value = period["value"] as! Double
-//          let entry = ChartDataEntry.init(x: Double(i * 100), y: value)
-//
-//          chartData.append(entry)
-//          i += 1
-//      }
-//
-//        let chartColor = hexStringToUIColor(hex:"#189E6C")
-//
-//        chartData.setColor(chartColor)
-//        chartData.lineWidth = 2.0
-//        chartData.mode = .cubicBezier
-//
-//        chartData.fill = Fill(color: chartColor)
-//        chartData.fillAlpha = 0.5
-//
-//        let graphOptions = pData["graphOptions"] as! Dictionary<String, Any>
-//
-//        let drawCirclesEnabled =  graphOptions["drawCirclesEnabled"] == nil ? 0 : graphOptions["drawCirclesEnabled"]
-//        let drawFilledEnabled =  graphOptions["drawFilledEnabled"] == nil ? 0 : graphOptions["drawFilledEnabled"]
-//        let drawValuesEnabled =  graphOptions["drawValuesEnabled"] == nil ? 0 : pData["drawValuesEnabled"]
-//
-//        chartData.drawCirclesEnabled = Bool(truncating: drawCirclesEnabled as! NSNumber)
-//        chartData.drawFilledEnabled = Bool(truncating: drawFilledEnabled as! NSNumber)
-//        chartData.drawValuesEnabled = Bool(truncating: drawValuesEnabled as! NSNumber)
-//
-//
-//        lineChartView.data = LineChartData(dataSets: [chartData])
-//
-//    }
-//  }
+  required init?(coder aDecoder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+  
+  @objc var yAxisEnabled: NSNumber = 1 {
+    didSet {
+      lineChartView.leftAxis.enabled = Bool(truncating: yAxisEnabled)
+      lineChartView.notifyDataSetChanged()
+    }
+  }
+  
+  @objc var xAxisEnabled: NSNumber = 1 {
+    didSet {
+      lineChartView.xAxis.enabled = Bool(truncating: xAxisEnabled)
+      lineChartView.notifyDataSetChanged()
+    }
+  }
+  
+  @objc var legendEnabled: NSNumber = 1 {
+    didSet {
+      print("legendEnabled", legendEnabled)
+      lineChartView.legend.enabled = Bool(truncating: legendEnabled)
+      lineChartView.notifyDataSetChanged()
+    }
+  }
+  
+  
+  
   
   @objc var data: NSArray = [] {
       didSet {
@@ -97,7 +91,9 @@ class CompanyGraphView: UIView, ChartViewDelegate {
           let graphOptions = dataSet["graphOptions"] as! Dictionary<String, Any>
           
           var i = 0.00
-          revenue.forEach{ period in
+          let reversedRevenue = revenue.reversed() as [Dictionary<String, Any>]
+//          print("reversedRevenue", reversedRevenue)
+          reversedRevenue.forEach{ period in
             
             let value = period["value"] as! Double
             let entry = ChartDataEntry.init(x: Double(i * 100), y: value)
@@ -138,42 +134,7 @@ class CompanyGraphView: UIView, ChartViewDelegate {
     }
   }
   
-  
-  override init(frame: CGRect) {
-    super.init(frame: frame)
-    
-    self.addSubview(lineChartView)
-    lineChartView.centerInSuperview()
-    lineChartView.width(to: self)
-    lineChartView.height(to: self)
-  }
-  
-  required init?(coder aDecoder: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
-  }
-  
-  @objc var yAxisEnabled: NSNumber = 1 {
-    didSet {
-      lineChartView.leftAxis.enabled = Bool(truncating: yAxisEnabled)
-      lineChartView.notifyDataSetChanged()
-    }
-  }
-  
-  @objc var xAxisEnabled: NSNumber = 1 {
-    didSet {
-      lineChartView.xAxis.enabled = Bool(truncating: xAxisEnabled)
-      lineChartView.notifyDataSetChanged()
-    }
-  }
-  
-  @objc var legendEnabled: NSNumber = 1 {
-    didSet {
-      lineChartView.legend.enabled = Bool(truncating: legendEnabled)
-      lineChartView.notifyDataSetChanged()
-    }
-  }
-  
-  
+
   
   
   lazy var lineChartView: LineChartView = {

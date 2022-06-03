@@ -59,7 +59,7 @@ const CompanyDetailScreen = ({
                 graphOptions: {
                   drawFilledEnabled: true,
                   color:
-                    companyData.revenue[0].value < companyData.revenue[5].value
+                    companyData.revenue[0].value > companyData.revenue[5].value
                       ? '#189E6C'
                       : '#F70000',
                 },

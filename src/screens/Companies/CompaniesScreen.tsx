@@ -72,46 +72,44 @@ interface CompanyItemProps extends CompanyProps {
 const CompanyItem = (props: CompanyItemProps) => {
   return (
     <Pressable onPress={props.onPress}>
-      <View style={styles.shadow}>
-        <View style={styles.companyContainer}>
-          <View style={{ flexGrow: 1, justifyContent: 'center' }}>
-            <Text
-              style={{
-                fontSize: 18,
-                fontWeight: 'bold',
-                fontFamily: 'Test Calibre',
-              }}>
-              {props.name}
-            </Text>
-            <Text
-              style={{
-                fontSize: 14,
-                color: 'gray',
-                fontFamily: 'Test Calibre',
-              }}>
-              {props.location?.city}, {props.location?.country}
-            </Text>
-          </View>
-          <View>
-            <CompanyGraph
-              style={styles.graph}
-              yAxisEnabled={false}
-              xAxisEnabled={false}
-              legendEnabled={false}
-              data={[
-                {
-                  ...props,
-                  graphOptions: {
-                    drawFilledEnabled: true,
-                    color:
-                      props.revenue[0].value < props.revenue[5].value
-                        ? '#189E6C'
-                        : '#F70000',
-                  },
+      <View style={styles.companyContainer}>
+        <View style={{ flexGrow: 1, justifyContent: 'center' }}>
+          <Text
+            style={{
+              fontSize: 18,
+              fontWeight: 'bold',
+              fontFamily: 'Test Calibre',
+            }}>
+            {props.name}
+          </Text>
+          <Text
+            style={{
+              fontSize: 14,
+              color: 'gray',
+              fontFamily: 'Test Calibre',
+            }}>
+            {props.location?.city}, {props.location?.country}
+          </Text>
+        </View>
+        <View>
+          <CompanyGraph
+            style={styles.graph}
+            yAxisEnabled={false}
+            xAxisEnabled={false}
+            legendEnabled={false}
+            data={[
+              {
+                ...props,
+                graphOptions: {
+                  drawFilledEnabled: true,
+                  color:
+                    props.revenue[0].value > props.revenue[5].value
+                      ? '#189E6C'
+                      : '#F70000',
                 },
-              ]}
-            />
-          </View>
+              },
+            ]}
+          />
         </View>
       </View>
     </Pressable>
