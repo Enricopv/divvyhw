@@ -108,7 +108,7 @@ class CompanyGraphView: UIView, ChartViewDelegate {
           chartData.label = dataSet["name"] != nil ? dataSet["name"] as! String : ""
           
           chartData.setColor(chartColor)
-          chartData.lineWidth = 2.0
+          chartData.lineWidth = graphOptions["lineWidth"] != nil ? graphOptions["lineWidth"] as! CGFloat : 2.0 
           chartData.mode = .cubicBezier
           
           chartData.fill = Fill(color: chartColor)

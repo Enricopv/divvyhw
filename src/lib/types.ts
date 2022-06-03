@@ -18,5 +18,6 @@ type DataOptions = {
     drawCirclesEnabled?: boolean;
     color?: string;
     drawValuesEnabled?: boolean;
+    lineWidth?: number;
   };
 };

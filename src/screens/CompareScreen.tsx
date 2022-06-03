@@ -32,6 +32,7 @@ const CompareScreen = ({ navigation }: CompanyDetailScreenProps) => {
   const companyData = compData.find(item => item.id === 1) as CompanyProps;
 
   const [selected, setSelected] = React.useState<number[]>([]);
+  const [active, setActive] = React.useState<number>();
 
   const selectedCompanies = compData.filter(item =>
     selected.find(sel => sel === item.id),
@@ -45,6 +46,7 @@ const CompareScreen = ({ navigation }: CompanyDetailScreenProps) => {
     ...item,
     graphOptions: {
       color: item.color,
+      lineWidth: item.id === active ? 5 : 2,
     },
   }));
 
@@ -87,10 +89,18 @@ const CompareScreen = ({ navigation }: CompanyDetailScreenProps) => {
         <View style={styles.alignCenter}>
           {data.map(item => (
             <View key={item.id} style={styles.companyContainer}>
-              <View style={styles.title}>
-                <View style={{ ...styles.dot, backgroundColor: item.color }} />
-                <TitleText>{item.name}</TitleText>
-              </View>
+              <Pressable
+                onPress={() => {
+                  setActive(item.id);
+                }}
+                style={{ flexGrow: 1 }}>
+                <View style={styles.title}>
+                  <View
+                    style={{ ...styles.dot, backgroundColor: item.color }}
+                  />
+                  <TitleText>{item.name}</TitleText>
+                </View>
+              </Pressable>
               <Pressable onPress={onRemove(item.id)}>
                 <FontAwesomeIcon icon="trash" />
               </Pressable>
