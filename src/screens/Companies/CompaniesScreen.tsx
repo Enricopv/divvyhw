@@ -11,22 +11,17 @@
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import React from 'react';
 import {
-  Dimensions,
   FlatList,
-  Pressable,
   SafeAreaView,
   StatusBar,
   StyleSheet,
-  Text,
   useColorScheme,
-  View,
 } from 'react-native';
 
 import data from '../../data.json';
-import { CompanyGraph } from '../../lib';
 import { CompanyProps, RootParamList } from '../../types';
-
-const { width } = Dimensions.get('window');
+import { getCompanyAverages } from '../../utils/getCompanyAverages';
+import { CompanyItem } from '../../components';
 
 type CompaniesScreenProps = NativeStackScreenProps<
   RootParamList,
@@ -55,7 +50,7 @@ const CompaniesScreen = ({ navigation }: CompaniesScreenProps) => {
       <FlatList
         data={data}
         style={styles.scrollView}
-        contentContainerStyle={{ alignItems: 'center' }}
+        contentContainerStyle={styles.contentContainerStyle}
         keyExtractor={item => item.id.toString()}
         renderItem={({ item }) => (
           <CompanyItem {...item} onPress={onItemPress(item)} />
@@ -65,58 +60,26 @@ const CompaniesScreen = ({ navigation }: CompaniesScreenProps) => {
   );
 };
 
-interface CompanyItemProps extends CompanyProps {
-  onPress: () => void;
-}
+const styles = StyleSheet.create({
+  contentContainerStyle: { alignItems: 'center' },
+  main: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'white',
+  },
+  scrollView: {
+    width: '100%',
+    flex: 1,
+  },
+  center: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
 
-const CompanyItem = (props: CompanyItemProps) => {
-  return (
-    <Pressable onPress={props.onPress}>
-      <View style={styles.companyContainer}>
-        <View style={{ flexGrow: 1, justifyContent: 'center' }}>
-          <Text
-            style={{
-              fontSize: 18,
-              fontWeight: 'bold',
-              fontFamily: 'Test Calibre',
-            }}>
-            {props.name}
-          </Text>
-          <Text
-            style={{
-              fontSize: 14,
-              color: 'gray',
-              fontFamily: 'Test Calibre',
-            }}>
-            {props.location?.city}, {props.location?.country}
-          </Text>
-        </View>
-        <View>
-          <CompanyGraph
-            style={styles.graph}
-            yAxisEnabled={false}
-            xAxisEnabled={false}
-            legendEnabled={false}
-            data={[
-              {
-                ...props,
-                graphOptions: {
-                  drawFilledEnabled: true,
-                  color:
-                    props.revenue[0].value > props.revenue[5].value
-                      ? '#189E6C'
-                      : '#F70000',
-                },
-              },
-            ]}
-          />
-        </View>
-      </View>
-    </Pressable>
-  );
-};
-
-const intialValues = [
+export const intialValues = [
   {
     seq: 0,
     date: '2019-03-12',
@@ -148,61 +111,5 @@ const intialValues = [
     value: 0,
   },
 ];
-
-const getCompanyAverages = (companyData: CompanyProps[]) => {
-  const totals = companyData.reduce((agg, curr) => {
-    const aggCopy = [...agg];
-    curr.revenue.forEach(item => (agg[item.seq].value += item.value));
-    return aggCopy;
-  }, intialValues);
-
-  return totals.reduce((agg, curr) => {
-    const aggCopy = [...agg];
-    aggCopy[curr.seq].value = curr.value / companyData.length;
-    return agg;
-  }, intialValues);
-};
-
-const styles = StyleSheet.create({
-  main: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'white',
-  },
-  scrollView: {
-    width: '100%',
-    flex: 1,
-  },
-  graph: {
-    width: width * 0.2,
-    height: width * 0.2,
-
-    borderRadius: 4,
-    shadowColor: 'black',
-    shadowOpacity: 0.3,
-    shadowOffset: { width: 2, height: 2 },
-    shadowRadius: 4,
-  },
-  center: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  companyContainer: {
-    width: width * 0.9,
-    flexDirection: 'row',
-    borderBottomColor: 'rgba(0,0,0,0.2)',
-    borderBottomWidth: 1,
-    paddingHorizontal: 8,
-    shadowOpacity: 0,
-  },
-  shadow: {
-    shadowColor: 'black',
-    shadowOpacity: 0.3,
-    shadowOffset: { width: 2, height: 2 },
-    shadowRadius: 8,
-  },
-});
 
 export default CompaniesScreen;

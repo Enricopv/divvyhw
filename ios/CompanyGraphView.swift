@@ -71,7 +71,6 @@ class CompanyGraphView: UIView, ChartViewDelegate {
   
   @objc var legendEnabled: NSNumber = 1 {
     didSet {
-      print("legendEnabled", legendEnabled)
       lineChartView.legend.enabled = Bool(truncating: legendEnabled)
       lineChartView.notifyDataSetChanged()
     }
@@ -92,7 +91,6 @@ class CompanyGraphView: UIView, ChartViewDelegate {
           
           var i = 0.00
           let reversedRevenue = revenue.reversed() as [Dictionary<String, Any>]
-//          print("reversedRevenue", reversedRevenue)
           reversedRevenue.forEach{ period in
             
             let value = period["value"] as! Double

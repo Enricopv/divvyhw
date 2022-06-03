@@ -8,9 +8,9 @@ import {
   SafeAreaView,
   ScrollView,
   StyleSheet,
-  Text,
   View,
 } from 'react-native';
+import { MoneyText, SubtitleText, TitleText } from '../../components';
 import data from '../../data.json';
 import { CompanyGraph } from '../../lib';
 import { CompanyProps, RootParamList } from '../../types';
@@ -73,11 +73,11 @@ const CompanyDetailScreen = ({
             ]}
           />
         </View>
-        <View style={{ alignItems: 'center' }}>
+        <View style={{ alignItems: 'center', marginTop: 12 }}>
           <View style={{ width: screenWidth * 0.9 }}>
-            <Text style={styles.revenueTitle}>
+            <TitleText style={{ textAlign: 'center' }}>
               Revenue From The Past 6 Months
-            </Text>
+            </TitleText>
 
             <View>
               {companyData.revenue.map((item, index) => (
@@ -109,18 +109,16 @@ const RevenueItem = (props: {
 
   return (
     <View style={viewStyle} key={props.seq}>
-      <View style={styles.monthText}>
-        <Text style={{ fontSize: 20 }}>
+      <View style={styles.dateContainer}>
+        <TitleText>
           {dateFns.format(new Date(props.date.substring(0, 10)), 'MMM')}
-        </Text>
-        <Text style={styles.yearText}>
+        </TitleText>
+        <SubtitleText>
           {' '}
           '{dateFns.format(new Date(props.date.substring(0, 10)), 'yy')}
-        </Text>
+        </SubtitleText>
       </View>
-      <Text style={{ fontSize: 18, fontFamily: 'Roboto Mono' }}>
-        {formatter.format(props.value)}
-      </Text>
+      <MoneyText>{formatter.format(props.value)}</MoneyText>
     </View>
   );
 };
@@ -158,24 +156,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     paddingVertical: 12,
   },
-  revenueTitle: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    marginVertical: 12,
-    textAlign: 'center',
-    fontFamily: 'Test Calibre',
-  },
-  monthText: {
+  dateContainer: {
     flexGrow: 1,
     flexDirection: 'row',
     alignItems: 'center',
-    fontFamily: 'Test Calibre',
-  },
-  yearText: {
-    flexGrow: 1,
-    fontSize: 16,
-    color: 'rgba(0,0,0,0.6)',
-    fontFamily: 'Test Calibre',
   },
 });
 
