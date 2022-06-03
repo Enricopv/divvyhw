@@ -30,6 +30,8 @@ const CompanyDetailScreen = ({
     item => item.id === route.params.id,
   ) as CompanyProps;
 
+  const [selectedSeq, setSelectedSeq] = React.useState<number>();
+
   React.useLayoutEffect(() => {
     const onBackPress = () => {
       navigation.goBack();
@@ -70,7 +72,19 @@ const CompanyDetailScreen = ({
     <SafeAreaView style={styles.center}>
       <ScrollView>
         <View>
-          <CompanyGraph style={styles.graph} data={data} />
+          <CompanyGraph
+            style={styles.graph}
+            data={data}
+            onValueTouch={e => {
+              console.log('X: ', e.nativeEvent.x, 'Y: ', e.nativeEvent.y);
+
+              const seq = e.nativeEvent.x / 100;
+
+              const key = [5, 4, 3, 2, 1, 0];
+
+              setSelectedSeq(key[seq]);
+            }}
+          />
         </View>
         <View style={{ alignItems: 'center', marginTop: 12 }}>
           <View style={{ width: screenWidth * 0.9 }}>
@@ -84,6 +98,7 @@ const CompanyDetailScreen = ({
                   {...item}
                   isLast={index + 1 >= companyData.revenue.length}
                   key={index}
+                  selected={selectedSeq === item.seq}
                 />
               ))}
             </View>
@@ -99,11 +114,14 @@ const RevenueItem = (props: {
   date: string;
   value: number;
   isLast: boolean;
+  selected?: boolean;
 }) => {
   const viewStyle = {
     ...styles.revenueItem,
     borderBottomColor: !props.isLast ? 'rgba(0,0,0,0.3)' : undefined,
     borderBottomWidth: !props.isLast ? 1 : undefined,
+    backgroundColor: props.selected ? '#189E6C' : 'white',
+    paddingHorizontal: 8,
   };
 
   return (
@@ -125,10 +143,6 @@ const RevenueItem = (props: {
 const formatter = new Intl.NumberFormat('en-US', {
   style: 'currency',
   currency: 'USD',
-
-  // These options are needed to round to whole numbers if that's what you want.
-  //minimumFractionDigits: 0, // (this suffices for whole numbers, but will print 2500.10 as $2,500.1)
-  //maximumFractionDigits: 0, // (causes 2500.99 to be printed as $2,501)
 });
 
 const styles = StyleSheet.create({

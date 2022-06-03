@@ -10,6 +10,8 @@ import UIKit
 import Charts
 import TinyConstraints
 
+
+
 class XAxisFormatter : IAxisValueFormatter {
   
   let months: Dictionary<Double,String> = [0: "Oct", 100: "Nov", 200: "Dec", 300: "Jan", 400: "Feb", 500: "Mar"]
@@ -17,7 +19,6 @@ class XAxisFormatter : IAxisValueFormatter {
   func stringForValue(_ value: Double, axis: AxisBase?) -> String {
     return months[value] ?? String(value)
   }
-  
 }
 
 class YAxisFormatter : IAxisValueFormatter {
@@ -76,11 +77,27 @@ class CompanyGraphView: UIView, ChartViewDelegate {
     }
   }
   
+  @objc var onValueTouch: RCTDirectEventBlock?
+  
+  var activeLineId : Int? = nil
+  
+  @objc func setActiveLineId(id: NSNumber) {
+    activeLineId = id as? Int
+    lineChartView.notifyDataSetChanged()
+  }
   
   
+  public func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
+    print("ENTRY", entry)
+    if onValueTouch != nil {
+      
+      onValueTouch!(["x": entry.x, "y": entry.y])
+    }
+  }
   
   @objc var data: NSArray = [] {
       didSet {
+        
         let pData = data as! [Dictionary<String, Any>]
         
         let dataSets = pData.map { dataSet -> LineChartDataSet in
@@ -88,6 +105,12 @@ class CompanyGraphView: UIView, ChartViewDelegate {
           let chartData = LineChartDataSet(entries: [], label: "Revenue")
           let revenue = dataSet["revenue"] as! [Dictionary<String, Any>]
           let graphOptions = dataSet["graphOptions"] as! Dictionary<String, Any>
+          let color =  graphOptions["color"] == nil ? "#189E6C" : graphOptions["color"] as! String
+          let drawCirclesEnabled = graphOptions["drawCirclesEnabled"] == nil ? 0 : graphOptions["drawCirclesEnabled"]
+          let drawFilledEnabled = graphOptions["drawFilledEnabled"] == nil ? 0 : graphOptions["drawFilledEnabled"]
+          let drawValuesEnabled = graphOptions["drawValuesEnabled"] == nil ? 0 : graphOptions["drawValuesEnabled"]
+          
+          
           
           var i = 0.00
           let reversedRevenue = revenue.reversed() as [Dictionary<String, Any>]
@@ -95,30 +118,19 @@ class CompanyGraphView: UIView, ChartViewDelegate {
             
             let value = period["value"] as! Double
             let entry = ChartDataEntry.init(x: Double(i * 100), y: value)
-            
             chartData.append(entry)
             i += 1
           }
           
-          
-          let color =  graphOptions["color"] == nil ? "#189E6C" : graphOptions["color"] as! String
-          
           let chartColor = hexStringToUIColor(hex: color)
+          chartData.setColor(chartColor)
           
           chartData.label = dataSet["name"] != nil ? dataSet["name"] as! String : ""
-          
-          chartData.setColor(chartColor)
-          chartData.lineWidth = graphOptions["lineWidth"] != nil ? graphOptions["lineWidth"] as! CGFloat : 2.0 
+//          chartData.lineWidth = graphOptions["lineWidth"] != nil ? graphOptions["lineWidth"] as! CGFloat : 2.0
+          chartData.lineWidth = dataSet["id"] as? Int == activeLineId ? 4.0 : 2.0
           chartData.mode = .cubicBezier
-          
           chartData.fill = Fill(color: chartColor)
           chartData.fillAlpha = 0.5
-          
-          
-          let drawCirclesEnabled = graphOptions["drawCirclesEnabled"] == nil ? 0 : graphOptions["drawCirclesEnabled"]
-          let drawFilledEnabled = graphOptions["drawFilledEnabled"] == nil ? 0 : graphOptions["drawFilledEnabled"]
-          let drawValuesEnabled = graphOptions["drawValuesEnabled"] == nil ? 0 : graphOptions["drawValuesEnabled"]
-          
           chartData.drawCirclesEnabled = Bool(truncating: drawCirclesEnabled as! NSNumber)
           chartData.drawFilledEnabled = Bool(truncating: drawFilledEnabled as! NSNumber)
           chartData.drawValuesEnabled = Bool(truncating: drawValuesEnabled as! NSNumber)
@@ -126,9 +138,9 @@ class CompanyGraphView: UIView, ChartViewDelegate {
           return chartData
         }
         
-       
         lineChartView.data = LineChartData(dataSets: dataSets)
-      
+       
+    
     }
   }
   
@@ -137,7 +149,9 @@ class CompanyGraphView: UIView, ChartViewDelegate {
   
   lazy var lineChartView: LineChartView = {
     let chartView = LineChartView()
-   
+    
+    chartView.delegate = self
+    
     chartView.rightAxis.enabled = false
     let yAxis = chartView.leftAxis
     let xAxis = chartView.xAxis
@@ -148,24 +162,16 @@ class CompanyGraphView: UIView, ChartViewDelegate {
     yAxis.labelPosition = .insideChart
     yAxis.valueFormatter = YAxisFormatter()
     
-    
     xAxis.labelFont = .boldSystemFont(ofSize: 10)
     xAxis.setLabelCount(6, force: true)
     xAxis.valueFormatter = XAxisFormatter()
+    xAxis.labelPosition = .bottom
     
-    
-    chartView.xAxis.labelPosition = .bottom
     chartView.drawGridBackgroundEnabled = false
-    
     chartView.legend.enabled = true
-    
-    
-    
     chartView.isMultipleTouchEnabled = false
     chartView.doubleTapToZoomEnabled = false
     chartView.data?.setDrawValues(false)
-    
-    
     return chartView
   }()
   

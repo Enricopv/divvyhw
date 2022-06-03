@@ -4,7 +4,7 @@
 
 #import <React/RCTBridgeModule.h>
 #import <React/RCTViewManager.h>
-
+#import "React/RCTEventEmitter.h"
 
 @interface LineGraphViewManager : NSObject <RCTBridgeModule>
 @end

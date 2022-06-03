@@ -10,6 +10,7 @@ export interface CompanyGraphProps extends ViewProps {
   yAxisEnabled?: boolean;
   xAxisEnabled?: boolean;
   legendEnabled?: boolean;
+  onValueTouch?: (e: { nativeEvent: { x: number; y: number } }) => void;
 }
 
 type DataOptions = {

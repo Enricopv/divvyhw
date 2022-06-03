@@ -7,4 +7,5 @@
   RCT_EXPORT_VIEW_PROPERTY(yAxisEnabled, NSNumber)
   RCT_EXPORT_VIEW_PROPERTY(xAxisEnabled, NSNumber)
   RCT_EXPORT_VIEW_PROPERTY(legendEnabled, NSNumber)
+  RCT_EXPORT_VIEW_PROPERTY(onValueTouch, RCTDirectEventBlock)
 @end
