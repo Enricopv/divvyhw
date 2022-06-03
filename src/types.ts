@@ -8,15 +8,13 @@ export interface CompanyProps {
 export type RootParamList = {
   TabStack: { [key: string]: any };
   Companies: undefined;
-  CompanySearch: undefined;
   Compare: {
     ids: number[];
     onItemSelect: (id: number) => void;
   };
   Allowance: undefined;
   CompaniesScreen: undefined;
-  Modal: {
-    component: any;
+  CompanySearchModal: {
     [key: string]: any;
   };
   CompanyDetail: {

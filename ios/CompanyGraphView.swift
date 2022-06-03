@@ -79,14 +79,6 @@ class CompanyGraphView: UIView, ChartViewDelegate {
   
   @objc var onValueTouch: RCTDirectEventBlock?
   
-  var activeLineId : Int? = nil
-  
-  @objc func setActiveLineId(id: NSNumber) {
-    activeLineId = id as? Int
-    lineChartView.notifyDataSetChanged()
-  }
-  
-  
   public func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
     print("ENTRY", entry)
     if onValueTouch != nil {
@@ -126,8 +118,7 @@ class CompanyGraphView: UIView, ChartViewDelegate {
           chartData.setColor(chartColor)
           
           chartData.label = dataSet["name"] != nil ? dataSet["name"] as! String : ""
-//          chartData.lineWidth = graphOptions["lineWidth"] != nil ? graphOptions["lineWidth"] as! CGFloat : 2.0
-          chartData.lineWidth = dataSet["id"] as? Int == activeLineId ? 4.0 : 2.0
+          chartData.lineWidth = graphOptions["lineWidth"] != nil ? graphOptions["lineWidth"] as! CGFloat : 2.0
           chartData.mode = .cubicBezier
           chartData.fill = Fill(color: chartColor)
           chartData.fillAlpha = 0.5

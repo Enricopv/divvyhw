@@ -10,7 +10,6 @@
 
 import { requireNativeComponent } from 'react-native';
 
-const NativeLineGraph = requireNativeComponent('LineGraphView');
 const NativeCompanyGraphView = requireNativeComponent('CompanyGraphView');
 
-export { NativeLineGraph, NativeCompanyGraphView };
+export { NativeCompanyGraphView };

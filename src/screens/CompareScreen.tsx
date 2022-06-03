@@ -13,7 +13,6 @@ import { TitleText } from '../components';
 import dataJSON from '../data.json';
 import { CompanyGraph } from '../lib';
 import { CompanyProps, RootParamList } from '../types';
-import CompanySearch from './CompanySearch';
 
 const { width: screenWidth } = Dimensions.get('window');
 
@@ -23,18 +22,21 @@ type CompanyDetailScreenProps = NativeStackScreenProps<
 >;
 
 const randomColor = () => Math.floor(Math.random() * 16777215).toString(16);
-const compData = dataJSON.map(item => ({
+
+const dataJSONWithColors = dataJSON.map(item => ({
   ...item,
   color: `#${randomColor()}`,
 }));
 
 const CompareScreen = ({ navigation }: CompanyDetailScreenProps) => {
-  const companyData = compData.find(item => item.id === 1) as CompanyProps;
+  const companyData = dataJSONWithColors.find(
+    item => item.id === 1,
+  ) as CompanyProps;
 
   const [selected, setSelected] = React.useState<number[]>([]);
   const [active, setActive] = React.useState<number>();
 
-  const selectedCompanies = compData.filter(item =>
+  const selectedCompanies = dataJSONWithColors.filter(item =>
     selected.find(sel => sel === item.id),
   );
 
@@ -56,8 +58,7 @@ const CompareScreen = ({ navigation }: CompanyDetailScreenProps) => {
     };
 
     const onAddPress = () => {
-      navigation.navigate('Modal', {
-        component: CompanySearch,
+      navigation.navigate('CompanySearchModal', {
         ids: selected,
         onItemSelect,
       });
@@ -67,7 +68,7 @@ const CompareScreen = ({ navigation }: CompanyDetailScreenProps) => {
       headerTitleStyle: { fontFamily: 'Test Calibre', fontSize: 18 },
       title: 'Compare',
       headerRight: () => (
-        <Pressable onPress={onAddPress} style={{ marginRight: 8 }}>
+        <Pressable onPress={onAddPress} style={styles.plusButton}>
           <FontAwesomeIcon icon="plus" />
         </Pressable>
       ),
@@ -79,11 +80,9 @@ const CompareScreen = ({ navigation }: CompanyDetailScreenProps) => {
       <ScrollView>
         <CompanyGraph style={styles.graph} data={data} legendEnabled={false} />
         {!selected.length && (
-          <View style={{ justifyContent: 'center' }}>
-            <TitleText style={{ textAlign: 'center' }}>
-              Use the "+" above to add a company!
-            </TitleText>
-          </View>
+          <TitleText style={styles.message}>
+            Use the "+" above to add a company!
+          </TitleText>
         )}
 
         <View style={styles.alignCenter}>
@@ -93,7 +92,7 @@ const CompareScreen = ({ navigation }: CompanyDetailScreenProps) => {
                 onPress={() => {
                   setActive(item.id);
                 }}
-                style={{ flexGrow: 1 }}>
+                style={styles.companyButton}>
                 <View style={styles.title}>
                   <View
                     style={{ ...styles.dot, backgroundColor: item.color }}
@@ -113,6 +112,9 @@ const CompareScreen = ({ navigation }: CompanyDetailScreenProps) => {
 };
 
 const styles = StyleSheet.create({
+  plusButton: { marginRight: 8 },
+  companyButton: { flexGrow: 1 },
+  message: { textAlign: 'center' },
   alignCenter: { alignItems: 'center' },
   graph: {
     width: screenWidth,

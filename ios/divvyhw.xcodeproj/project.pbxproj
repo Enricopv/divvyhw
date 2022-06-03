@@ -12,33 +12,30 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		144BD46E48AB4708AF88AC87 /* test-calibre-light-italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 9BFA51CE0DD74CBBB25A3430 /* test-calibre-light-italic.woff2 */; };
+		19429FF355A14A249A3630A8 /* RobotoMono-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A8860BF2C3B42E89B26D3FD /* RobotoMono-Italic-VariableFont_wght.ttf */; };
+		1E99ED8093D54C57900022E9 /* test-calibre-medium-italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 9819110790CA44DCA138961A /* test-calibre-medium-italic.woff2 */; };
+		23242E5BBEA54D75B0CAB8BD /* test-calibre-medium.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = A9F5915D13874A3C8F2E73F2 /* test-calibre-medium.woff2 */; };
 		357889992849C3AD0052BFC7 /* libReact-Core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 357889982849C3AD0052BFC7 /* libReact-Core.a */; };
 		3578899B2849C3C70052BFC7 /* libTinyConstraints.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3578899A2849C3C70052BFC7 /* libTinyConstraints.a */; };
 		358B58D12846D56F00C3F366 /* libCharts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 358B58D02846D56F00C3F366 /* libCharts.a */; };
-		358B58D62846D7E300C3F366 /* LineGraphViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358B58D52846D7E300C3F366 /* LineGraphViewManager.swift */; };
-		358B58D82846D89700C3F366 /* LineGraphViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 358B58D72846D89700C3F366 /* LineGraphViewManager.m */; };
-		358B58DA2846DD8300C3F366 /* LineGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358B58D92846DD8300C3F366 /* LineGraphView.swift */; };
 		35F90E02284838BC0068ED8C /* CompanyGraphViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F90E01284838BC0068ED8C /* CompanyGraphViewManager.swift */; };
 		35F90E04284838E90068ED8C /* CompanyGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F90E03284838E90068ED8C /* CompanyGraphView.swift */; };
 		35F90E062848390E0068ED8C /* CompanyGraphViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F90E052848390E0068ED8C /* CompanyGraphViewManager.m */; };
-		7699B88040F8A987B510C191 /* libPods-divvyhw-divvyhwTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-divvyhw-divvyhwTests.a */; };
-		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		19429FF355A14A249A3630A8 /* RobotoMono-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A8860BF2C3B42E89B26D3FD /* RobotoMono-Italic-VariableFont_wght.ttf */; };
-		B69F0790D04B483C83F8EC93 /* RobotoMono-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD02CD36D98F4DFF9926320D /* RobotoMono-VariableFont_wght.ttf */; };
+		3B5ABF314B3C4CAEA5BB171C /* test-calibre-light.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 5CC74B19B9B942A695304404 /* test-calibre-light.woff2 */; };
+		4169C5A12AE549918BA7CABF /* test-calibre-semibold-italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 717416089B5B4B7FAC3382FA /* test-calibre-semibold-italic.woff2 */; };
+		5B85E2D4697D4476B2203C68 /* test-calibre-thin-italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 4D1267A1C541495AB5D1F89F /* test-calibre-thin-italic.woff2 */; };
 		6D0B3D7310774BF5B8FC09EE /* test-calibre-black-italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 82EDFE9A7B554152BD15641A /* test-calibre-black-italic.woff2 */; };
 		75BE037B5D8C4BA690C90C69 /* test-calibre-black.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 95525C7163F1467CAE1241D0 /* test-calibre-black.woff2 */; };
-		C4412EF224A94CD3B73781C6 /* test-calibre-bold-italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = D6F2200260224044A2457854 /* test-calibre-bold-italic.woff2 */; };
-		B1EF82727CE64262AED8BD7C /* test-calibre-bold.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 637D29BBDDF3465F81E1F39D /* test-calibre-bold.woff2 */; };
-		144BD46E48AB4708AF88AC87 /* test-calibre-light-italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 9BFA51CE0DD74CBBB25A3430 /* test-calibre-light-italic.woff2 */; };
-		3B5ABF314B3C4CAEA5BB171C /* test-calibre-light.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 5CC74B19B9B942A695304404 /* test-calibre-light.woff2 */; };
-		1E99ED8093D54C57900022E9 /* test-calibre-medium-italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 9819110790CA44DCA138961A /* test-calibre-medium-italic.woff2 */; };
-		23242E5BBEA54D75B0CAB8BD /* test-calibre-medium.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = A9F5915D13874A3C8F2E73F2 /* test-calibre-medium.woff2 */; };
-		FEAADAA09E6B414D905FABA2 /* test-calibre-regular-italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 2A342B13CFAD4B81B3D68105 /* test-calibre-regular-italic.woff2 */; };
+		7699B88040F8A987B510C191 /* libPods-divvyhw-divvyhwTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-divvyhw-divvyhwTests.a */; };
 		79E44D75B7394123B69C282F /* test-calibre-regular.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 14C1C7034076468C83B44C16 /* test-calibre-regular.woff2 */; };
-		4169C5A12AE549918BA7CABF /* test-calibre-semibold-italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 717416089B5B4B7FAC3382FA /* test-calibre-semibold-italic.woff2 */; };
+		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		94474E1613E94D8CB34B90E0 /* test-calibre-semibold.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 5BD989DEB1FB4BFEBD0F1AE9 /* test-calibre-semibold.woff2 */; };
-		5B85E2D4697D4476B2203C68 /* test-calibre-thin-italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 4D1267A1C541495AB5D1F89F /* test-calibre-thin-italic.woff2 */; };
 		AE24A5B08EE04002B3EDF7D1 /* test-calibre-thin.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 41850B5AB64C46648CADCD4D /* test-calibre-thin.woff2 */; };
+		B1EF82727CE64262AED8BD7C /* test-calibre-bold.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 637D29BBDDF3465F81E1F39D /* test-calibre-bold.woff2 */; };
+		B69F0790D04B483C83F8EC93 /* RobotoMono-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD02CD36D98F4DFF9926320D /* RobotoMono-VariableFont_wght.ttf */; };
+		C4412EF224A94CD3B73781C6 /* test-calibre-bold-italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = D6F2200260224044A2457854 /* test-calibre-bold-italic.woff2 */; };
+		FEAADAA09E6B414D905FABA2 /* test-calibre-regular-italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 2A342B13CFAD4B81B3D68105 /* test-calibre-regular-italic.woff2 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,41 +58,38 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = divvyhw/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = divvyhw/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = divvyhw/main.m; sourceTree = "<group>"; };
+		14C1C7034076468C83B44C16 /* test-calibre-regular.woff2 */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "test-calibre-regular.woff2"; path = "../assets/fonts/test-calibre-regular.woff2"; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-divvyhw-divvyhwTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-divvyhw-divvyhwTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A342B13CFAD4B81B3D68105 /* test-calibre-regular-italic.woff2 */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "test-calibre-regular-italic.woff2"; path = "../assets/fonts/test-calibre-regular-italic.woff2"; sourceTree = "<group>"; };
 		357889982849C3AD0052BFC7 /* libReact-Core.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-Core.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3578899A2849C3C70052BFC7 /* libTinyConstraints.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libTinyConstraints.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		358B58D02846D56F00C3F366 /* libCharts.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libCharts.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		358B58D22846D57300C3F366 /* libTinyConstraints.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libTinyConstraints.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		358B58D42846D7E300C3F366 /* divvyhw-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "divvyhw-Bridging-Header.h"; sourceTree = "<group>"; };
-		358B58D52846D7E300C3F366 /* LineGraphViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineGraphViewManager.swift; sourceTree = "<group>"; };
-		358B58D72846D89700C3F366 /* LineGraphViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LineGraphViewManager.m; sourceTree = "<group>"; };
-		358B58D92846DD8300C3F366 /* LineGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineGraphView.swift; sourceTree = "<group>"; };
 		35F90E01284838BC0068ED8C /* CompanyGraphViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyGraphViewManager.swift; sourceTree = "<group>"; };
 		35F90E03284838E90068ED8C /* CompanyGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyGraphView.swift; sourceTree = "<group>"; };
 		35F90E052848390E0068ED8C /* CompanyGraphViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompanyGraphViewManager.m; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-divvyhw.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-divvyhw.debug.xcconfig"; path = "Target Support Files/Pods-divvyhw/Pods-divvyhw.debug.xcconfig"; sourceTree = "<group>"; };
+		41850B5AB64C46648CADCD4D /* test-calibre-thin.woff2 */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "test-calibre-thin.woff2"; path = "../assets/fonts/test-calibre-thin.woff2"; sourceTree = "<group>"; };
+		4D1267A1C541495AB5D1F89F /* test-calibre-thin-italic.woff2 */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "test-calibre-thin-italic.woff2"; path = "../assets/fonts/test-calibre-thin-italic.woff2"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-divvyhw.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-divvyhw.release.xcconfig"; path = "Target Support Files/Pods-divvyhw/Pods-divvyhw.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-divvyhw-divvyhwTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-divvyhw-divvyhwTests.debug.xcconfig"; path = "Target Support Files/Pods-divvyhw-divvyhwTests/Pods-divvyhw-divvyhwTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5BD989DEB1FB4BFEBD0F1AE9 /* test-calibre-semibold.woff2 */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "test-calibre-semibold.woff2"; path = "../assets/fonts/test-calibre-semibold.woff2"; sourceTree = "<group>"; };
+		5CC74B19B9B942A695304404 /* test-calibre-light.woff2 */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "test-calibre-light.woff2"; path = "../assets/fonts/test-calibre-light.woff2"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-divvyhw.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-divvyhw.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		637D29BBDDF3465F81E1F39D /* test-calibre-bold.woff2 */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "test-calibre-bold.woff2"; path = "../assets/fonts/test-calibre-bold.woff2"; sourceTree = "<group>"; };
+		717416089B5B4B7FAC3382FA /* test-calibre-semibold-italic.woff2 */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "test-calibre-semibold-italic.woff2"; path = "../assets/fonts/test-calibre-semibold-italic.woff2"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = divvyhw/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		82EDFE9A7B554152BD15641A /* test-calibre-black-italic.woff2 */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "test-calibre-black-italic.woff2"; path = "../assets/fonts/test-calibre-black-italic.woff2"; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-divvyhw-divvyhwTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-divvyhw-divvyhwTests.release.xcconfig"; path = "Target Support Files/Pods-divvyhw-divvyhwTests/Pods-divvyhw-divvyhwTests.release.xcconfig"; sourceTree = "<group>"; };
+		8A8860BF2C3B42E89B26D3FD /* RobotoMono-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoMono-Italic-VariableFont_wght.ttf"; path = "../assets/fonts/RobotoMono-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		95525C7163F1467CAE1241D0 /* test-calibre-black.woff2 */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "test-calibre-black.woff2"; path = "../assets/fonts/test-calibre-black.woff2"; sourceTree = "<group>"; };
+		9819110790CA44DCA138961A /* test-calibre-medium-italic.woff2 */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "test-calibre-medium-italic.woff2"; path = "../assets/fonts/test-calibre-medium-italic.woff2"; sourceTree = "<group>"; };
+		9BFA51CE0DD74CBBB25A3430 /* test-calibre-light-italic.woff2 */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "test-calibre-light-italic.woff2"; path = "../assets/fonts/test-calibre-light-italic.woff2"; sourceTree = "<group>"; };
+		A9F5915D13874A3C8F2E73F2 /* test-calibre-medium.woff2 */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "test-calibre-medium.woff2"; path = "../assets/fonts/test-calibre-medium.woff2"; sourceTree = "<group>"; };
+		D6F2200260224044A2457854 /* test-calibre-bold-italic.woff2 */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "test-calibre-bold-italic.woff2"; path = "../assets/fonts/test-calibre-bold-italic.woff2"; sourceTree = "<group>"; };
+		DD02CD36D98F4DFF9926320D /* RobotoMono-VariableFont_wght.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoMono-VariableFont_wght.ttf"; path = "../assets/fonts/RobotoMono-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		8A8860BF2C3B42E89B26D3FD /* RobotoMono-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; name = "RobotoMono-Italic-VariableFont_wght.ttf"; path = "../assets/fonts/RobotoMono-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		DD02CD36D98F4DFF9926320D /* RobotoMono-VariableFont_wght.ttf */ = {isa = PBXFileReference; name = "RobotoMono-VariableFont_wght.ttf"; path = "../assets/fonts/RobotoMono-VariableFont_wght.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		82EDFE9A7B554152BD15641A /* test-calibre-black-italic.woff2 */ = {isa = PBXFileReference; name = "test-calibre-black-italic.woff2"; path = "../assets/fonts/test-calibre-black-italic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		95525C7163F1467CAE1241D0 /* test-calibre-black.woff2 */ = {isa = PBXFileReference; name = "test-calibre-black.woff2"; path = "../assets/fonts/test-calibre-black.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		D6F2200260224044A2457854 /* test-calibre-bold-italic.woff2 */ = {isa = PBXFileReference; name = "test-calibre-bold-italic.woff2"; path = "../assets/fonts/test-calibre-bold-italic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		637D29BBDDF3465F81E1F39D /* test-calibre-bold.woff2 */ = {isa = PBXFileReference; name = "test-calibre-bold.woff2"; path = "../assets/fonts/test-calibre-bold.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		9BFA51CE0DD74CBBB25A3430 /* test-calibre-light-italic.woff2 */ = {isa = PBXFileReference; name = "test-calibre-light-italic.woff2"; path = "../assets/fonts/test-calibre-light-italic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		5CC74B19B9B942A695304404 /* test-calibre-light.woff2 */ = {isa = PBXFileReference; name = "test-calibre-light.woff2"; path = "../assets/fonts/test-calibre-light.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		9819110790CA44DCA138961A /* test-calibre-medium-italic.woff2 */ = {isa = PBXFileReference; name = "test-calibre-medium-italic.woff2"; path = "../assets/fonts/test-calibre-medium-italic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		A9F5915D13874A3C8F2E73F2 /* test-calibre-medium.woff2 */ = {isa = PBXFileReference; name = "test-calibre-medium.woff2"; path = "../assets/fonts/test-calibre-medium.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		2A342B13CFAD4B81B3D68105 /* test-calibre-regular-italic.woff2 */ = {isa = PBXFileReference; name = "test-calibre-regular-italic.woff2"; path = "../assets/fonts/test-calibre-regular-italic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		14C1C7034076468C83B44C16 /* test-calibre-regular.woff2 */ = {isa = PBXFileReference; name = "test-calibre-regular.woff2"; path = "../assets/fonts/test-calibre-regular.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		717416089B5B4B7FAC3382FA /* test-calibre-semibold-italic.woff2 */ = {isa = PBXFileReference; name = "test-calibre-semibold-italic.woff2"; path = "../assets/fonts/test-calibre-semibold-italic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		5BD989DEB1FB4BFEBD0F1AE9 /* test-calibre-semibold.woff2 */ = {isa = PBXFileReference; name = "test-calibre-semibold.woff2"; path = "../assets/fonts/test-calibre-semibold.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		4D1267A1C541495AB5D1F89F /* test-calibre-thin-italic.woff2 */ = {isa = PBXFileReference; name = "test-calibre-thin-italic.woff2"; path = "../assets/fonts/test-calibre-thin-italic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		41850B5AB64C46648CADCD4D /* test-calibre-thin.woff2 */ = {isa = PBXFileReference; name = "test-calibre-thin.woff2"; path = "../assets/fonts/test-calibre-thin.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,21 +161,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		358B58DB2846EA1900C3F366 /* LineGraphView */ = {
-			isa = PBXGroup;
-			children = (
-				358B58D72846D89700C3F366 /* LineGraphViewManager.m */,
-				358B58D52846D7E300C3F366 /* LineGraphViewManager.swift */,
-				358B58D92846DD8300C3F366 /* LineGraphView.swift */,
-			);
-			name = LineGraphView;
-			sourceTree = "<group>";
-		};
 		35F90DFF284837D40068ED8C /* NativeCharts */ = {
 			isa = PBXGroup;
 			children = (
 				35F90E002848389B0068ED8C /* CompanyGraph */,
-				358B58DB2846EA1900C3F366 /* LineGraphView */,
 			);
 			name = NativeCharts;
 			sourceTree = "<group>";
@@ -228,19 +211,8 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3B4392A12AC88292D35C810B /* Pods-divvyhw.debug.xcconfig */,
-				5709B34CF0A7D63546082F79 /* Pods-divvyhw.release.xcconfig */,
-				5B7EB9410499542E8C5724F5 /* Pods-divvyhw-divvyhwTests.debug.xcconfig */,
-				89C6BE57DB24E9ADA2F236DE /* Pods-divvyhw-divvyhwTests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		87D61AA790AC47F1B24072B5 /* Resources */ = {
-			isa = "PBXGroup";
+			isa = PBXGroup;
 			children = (
 				8A8860BF2C3B42E89B26D3FD /* RobotoMono-Italic-VariableFont_wght.ttf */,
 				DD02CD36D98F4DFF9926320D /* RobotoMono-VariableFont_wght.ttf */,
@@ -261,7 +233,17 @@
 			);
 			name = Resources;
 			sourceTree = "<group>";
-			path = "";
+		};
+		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B4392A12AC88292D35C810B /* Pods-divvyhw.debug.xcconfig */,
+				5709B34CF0A7D63546082F79 /* Pods-divvyhw.release.xcconfig */,
+				5B7EB9410499542E8C5724F5 /* Pods-divvyhw-divvyhwTests.debug.xcconfig */,
+				89C6BE57DB24E9ADA2F236DE /* Pods-divvyhw-divvyhwTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -542,11 +524,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
-				358B58DA2846DD8300C3F366 /* LineGraphView.swift in Sources */,
 				35F90E04284838E90068ED8C /* CompanyGraphView.swift in Sources */,
 				35F90E062848390E0068ED8C /* CompanyGraphViewManager.m in Sources */,
-				358B58D82846D89700C3F366 /* LineGraphViewManager.m in Sources */,
-				358B58D62846D7E300C3F366 /* LineGraphViewManager.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				35F90E02284838BC0068ED8C /* CompanyGraphViewManager.swift in Sources */,
 			);

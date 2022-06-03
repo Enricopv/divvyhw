@@ -9,10 +9,7 @@ import {
 import { faSquareCheck } from '@fortawesome/free-solid-svg-icons/faSquareCheck';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
-import {
-  createNativeStackNavigator,
-  NativeStackScreenProps,
-} from '@react-navigation/native-stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
 import AllowanceScreen from './src/screens/AllowanceScreen';
 import CompaniesStack from './src/screens/Companies';
@@ -42,8 +39,10 @@ const App = () => {
           />
         </RootStack.Group>
         <RootStack.Group>
-          <RootStack.Screen name="Modal" component={ModalScreen} />
-          {/* <RootStack.Screen name="Test" component={CompanySearch} /> */}
+          <RootStack.Screen
+            name="CompanySearchModal"
+            component={CompanySearch}
+          />
         </RootStack.Group>
       </RootStack.Navigator>
     </NavigationContainer>
@@ -67,13 +66,6 @@ const TabStack = () => {
       />
     </Tab.Navigator>
   );
-};
-
-type ModalProps = NativeStackScreenProps<RootParamList, 'Modal'>;
-
-const ModalScreen = (props: ModalProps) => {
-  const { component: Component } = props.route.params;
-  return <Component {...props} />;
 };
 
 export default App;

@@ -1,10 +1,6 @@
 import * as React from 'react';
-import { NativeCompanyGraphView, NativeLineGraph } from './native-exports';
-import { CompanyGraphProps, LineGraphProps } from './types';
-
-export const LineGraph = (props: LineGraphProps) => {
-  return <NativeLineGraph {...props} />;
-};
+import { NativeCompanyGraphView } from './native-exports';
+import { CompanyGraphProps } from './types';
 
 export const CompanyGraph = (props: CompanyGraphProps) => {
   return <NativeCompanyGraphView {...props} />;

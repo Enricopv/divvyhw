@@ -86,9 +86,9 @@ const CompanyDetailScreen = ({
             }}
           />
         </View>
-        <View style={{ alignItems: 'center', marginTop: 12 }}>
+        <View style={styles.revenueContainer}>
           <View style={{ width: screenWidth * 0.9 }}>
-            <TitleText style={{ textAlign: 'center' }}>
+            <TitleText style={styles.textCenter}>
               Revenue From The Past 6 Months
             </TitleText>
 
@@ -146,6 +146,7 @@ const formatter = new Intl.NumberFormat('en-US', {
 });
 
 const styles = StyleSheet.create({
+  textCenter: { textAlign: 'center' },
   graph: {
     width: screenWidth,
     height: screenWidth * 0.75,
@@ -165,6 +166,8 @@ const styles = StyleSheet.create({
   titleContainer: {
     paddingHorizontal: 8,
   },
+  revenueContainer: { alignItems: 'center', marginTop: 12 },
+  revenueContainerWidth: {},
   revenueItem: {
     flexDirection: 'row',
     paddingVertical: 12,
