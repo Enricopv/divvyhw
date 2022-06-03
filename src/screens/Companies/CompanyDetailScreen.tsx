@@ -11,7 +11,7 @@ import {
   View,
 } from 'react-native';
 import { MoneyText, SubtitleText, TitleText } from '../../components';
-import data from '../../data.json';
+import dataJSON from '../../data.json';
 import { CompanyGraph } from '../../lib';
 import { CompanyProps, RootParamList } from '../../types';
 
@@ -26,7 +26,7 @@ const CompanyDetailScreen = ({
   navigation,
   route,
 }: CompanyDetailScreenProps) => {
-  const companyData = data.find(
+  const companyData = dataJSON.find(
     item => item.id === route.params.id,
   ) as CompanyProps;
 
@@ -47,31 +47,30 @@ const CompanyDetailScreen = ({
     });
   }, [navigation, companyData]);
 
+  const data = [
+    {
+      ...companyData,
+      graphOptions: {
+        drawFilledEnabled: true,
+        color:
+          companyData.revenue[0].value > companyData.revenue[5].value
+            ? '#189E6C'
+            : '#F70000',
+      },
+    },
+    {
+      id: 1090,
+      name: 'Average',
+      revenue: route.params.averages,
+      graphOptions: { drawFilledEnabled: false, color: '#1D8BF7' },
+    },
+  ];
+
   return (
     <SafeAreaView style={styles.center}>
       <ScrollView>
         <View>
-          <CompanyGraph
-            style={styles.graph}
-            data={[
-              {
-                ...companyData,
-                graphOptions: {
-                  drawFilledEnabled: true,
-                  color:
-                    companyData.revenue[0].value > companyData.revenue[5].value
-                      ? '#189E6C'
-                      : '#F70000',
-                },
-              },
-              {
-                id: 1090,
-                name: 'Average',
-                revenue: route.params.averages,
-                graphOptions: { drawFilledEnabled: false, color: '#1D8BF7' },
-              },
-            ]}
-          />
+          <CompanyGraph style={styles.graph} data={data} />
         </View>
         <View style={{ alignItems: 'center', marginTop: 12 }}>
           <View style={{ width: screenWidth * 0.9 }}>

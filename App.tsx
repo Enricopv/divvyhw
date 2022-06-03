@@ -3,42 +3,77 @@ import {
   faArrowLeftLong,
   faB,
   faBeerMugEmpty,
+  faPlus,
+  faTrash,
 } from '@fortawesome/free-solid-svg-icons';
 import { faSquareCheck } from '@fortawesome/free-solid-svg-icons/faSquareCheck';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
+import {
+  createNativeStackNavigator,
+  NativeStackScreenProps,
+} from '@react-navigation/native-stack';
 import React from 'react';
 import AllowanceScreen from './src/screens/AllowanceScreen';
 import CompaniesStack from './src/screens/Companies';
+import CompanySearch from './src/screens/CompanySearch';
 import CompareScreen from './src/screens/CompareScreen';
 import { RootParamList } from './src/types';
 
-library.add(faB, faSquareCheck, faBeerMugEmpty, faArrowLeftLong);
-
-const Tab = createBottomTabNavigator<RootParamList>();
+library.add(
+  faB,
+  faSquareCheck,
+  faBeerMugEmpty,
+  faArrowLeftLong,
+  faPlus,
+  faTrash,
+);
+const RootStack = createNativeStackNavigator();
 
 const App = () => {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen
-          name="Companies"
-          component={CompaniesStack}
-          options={{ headerShown: false }}
-        />
-        <Tab.Screen
-          name="Compare"
-          component={CompareScreen}
-          options={{ headerShown: false }}
-        />
-        <Tab.Screen
-          name="Allowance"
-          component={AllowanceScreen}
-          options={{ headerShown: false }}
-        />
-      </Tab.Navigator>
+      <RootStack.Navigator initialRouteName="TabStack">
+        <RootStack.Group>
+          <RootStack.Screen
+            name="TabStack"
+            component={TabStack}
+            options={{ headerShown: false }}
+          />
+        </RootStack.Group>
+        <RootStack.Group>
+          <RootStack.Screen name="Modal" component={ModalScreen} />
+          {/* <RootStack.Screen name="Test" component={CompanySearch} /> */}
+        </RootStack.Group>
+      </RootStack.Navigator>
     </NavigationContainer>
   );
+};
+
+const Tab = createBottomTabNavigator<RootParamList>();
+const TabStack = () => {
+  return (
+    <Tab.Navigator>
+      <Tab.Screen
+        name="Companies"
+        component={CompaniesStack}
+        options={{ headerShown: false }}
+      />
+      <Tab.Screen name="Compare" component={CompareScreen} />
+      <Tab.Screen
+        name="Allowance"
+        component={AllowanceScreen}
+        options={{ headerShown: false }}
+      />
+    </Tab.Navigator>
+  );
+};
+
+type ModalProps = NativeStackScreenProps<RootParamList, 'Modal'>;
+
+const ModalScreen = (props: ModalProps) => {
+  const { component: Component } = props.route.params;
+  return <Component {...props} />;
 };
 
 export default App;
