@@ -2,10 +2,10 @@
 
 Hello there! Here is repo for the homework assignment. I had intially wanted to do a bunch of fancy stuff with react-native-renanimated2, but I opted to focus on:
 
-- Only wanting to use one Line Graph component with many props available to allow for customization
-- Ability to add any number of data sets AND chart options to configure their color
-- Interacting with the graph through JavaScript to native iOS
-- Updating the UI via native iOS chart interaction to JavaScript state
+- Creating one customizable Line Graph and use it in 3 different situations.
+- Ability to add any number of data sets AND chart options to configure options like color.
+- Interacting with the graph through JavaScript to native iOS.
+- Updating the UI via native iOS chart interaction to JavaScript state.
 
 I look forward to hearing from you all!
 
