@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import * as dateFns from 'date-fns';
 import React from 'react';
@@ -29,21 +30,26 @@ const CompanyDetailScreen = ({
     item => item.id === route.params.id,
   ) as CompanyProps;
 
-  const onBackPress = () => {
-    navigation.goBack();
-  };
+  React.useLayoutEffect(() => {
+    const onBackPress = () => {
+      navigation.goBack();
+    };
+
+    navigation.setOptions({
+      headerTitleStyle: { fontFamily: 'Test Calibre' },
+      title: companyData.name,
+      headerBackButtonMenuEnabled: false,
+      headerLeft: () => (
+        <Pressable onPress={onBackPress}>
+          <FontAwesomeIcon icon="arrow-left-long" />
+        </Pressable>
+      ),
+    });
+  }, [navigation, companyData]);
 
   return (
     <SafeAreaView style={styles.center}>
       <ScrollView>
-        <View style={styles.header}>
-          <Pressable onPress={onBackPress}>
-            <Text>Back</Text>
-          </Pressable>
-        </View>
-        <View style={styles.titleContainer}>
-          <Text style={styles.title}>{companyData?.name}</Text>
-        </View>
         <View>
           <CompanyGraph
             style={styles.graph}
@@ -112,7 +118,9 @@ const RevenueItem = (props: {
           {dateFns.format(new Date(props.date.substring(0, 10)), 'yy')}
         </Text>
       </View>
-      <Text style={{ fontSize: 24 }}>{formatter.format(props.value)}</Text>
+      <Text style={{ fontSize: 18, fontFamily: 'Roboto Mono' }}>
+        {formatter.format(props.value)}
+      </Text>
     </View>
   );
 };
@@ -155,16 +163,19 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginVertical: 12,
     textAlign: 'center',
+    fontFamily: 'Test Calibre',
   },
   monthText: {
     flexGrow: 1,
     flexDirection: 'row',
     alignItems: 'center',
+    fontFamily: 'Test Calibre',
   },
   yearText: {
     flexGrow: 1,
     fontSize: 16,
     color: 'rgba(0,0,0,0.6)',
+    fontFamily: 'Test Calibre',
   },
 });
 

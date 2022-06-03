@@ -14,14 +14,14 @@ const CompaniesStack = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        options={{ headerShown: false }}
+        // options={{ headerShown: false }}
         name="CompaniesScreen"
         component={CompaniesScreen}
       />
       <Stack.Screen
         name="CompanyDetail"
         component={CompanyDetailScreen}
-        options={{ headerShown: false }}
+        // options={{ headerShown: false }}
       />
     </Stack.Navigator>
   );

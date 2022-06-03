@@ -42,10 +42,16 @@ const CompaniesScreen = ({ navigation }: CompaniesScreenProps) => {
     navigation.navigate('CompanyDetail', { id: item.id, averages });
   };
 
+  React.useLayoutEffect(() => {
+    navigation.setOptions({
+      title: 'Companies List',
+      headerTitleStyle: { fontFamily: 'Test Calibre' },
+    });
+  }, [navigation]);
+
   return (
     <SafeAreaView style={styles.main}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <Text style={{ fontSize: 24, fontWeight: 'bold', paddingBottom: 12 }}>Companies List</Text>
       <FlatList
         data={data}
         style={styles.scrollView}
@@ -69,10 +75,20 @@ const CompanyItem = (props: CompanyItemProps) => {
       <View style={styles.shadow}>
         <View style={styles.companyContainer}>
           <View style={{ flexGrow: 1, justifyContent: 'center' }}>
-            <Text style={{ fontSize: 18, fontWeight: 'bold' }}>
+            <Text
+              style={{
+                fontSize: 18,
+                fontWeight: 'bold',
+                fontFamily: 'Test Calibre',
+              }}>
               {props.name}
             </Text>
-            <Text style={{ fontSize: 14, color: 'gray' }}>
+            <Text
+              style={{
+                fontSize: 14,
+                color: 'gray',
+                fontFamily: 'Test Calibre',
+              }}>
               {props.location?.city}, {props.location?.country}
             </Text>
           </View>

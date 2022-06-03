@@ -36,7 +36,7 @@
 		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -51,5 +51,24 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>RobotoMono-Italic-VariableFont_wght.ttf</string>
+		<string>RobotoMono-VariableFont_wght.ttf</string>
+		<string>test-calibre-black-italic.woff2</string>
+		<string>test-calibre-black.woff2</string>
+		<string>test-calibre-bold-italic.woff2</string>
+		<string>test-calibre-bold.woff2</string>
+		<string>test-calibre-light-italic.woff2</string>
+		<string>test-calibre-light.woff2</string>
+		<string>test-calibre-medium-italic.woff2</string>
+		<string>test-calibre-medium.woff2</string>
+		<string>test-calibre-regular-italic.woff2</string>
+		<string>test-calibre-regular.woff2</string>
+		<string>test-calibre-semibold-italic.woff2</string>
+		<string>test-calibre-semibold.woff2</string>
+		<string>test-calibre-thin-italic.woff2</string>
+		<string>test-calibre-thin.woff2</string>
+	</array>
 </dict>
 </plist>

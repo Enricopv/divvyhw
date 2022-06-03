@@ -1,3 +1,10 @@
+import { library } from '@fortawesome/fontawesome-svg-core';
+import {
+  faArrowLeftLong,
+  faB,
+  faBeerMugEmpty,
+} from '@fortawesome/free-solid-svg-icons';
+import { faSquareCheck } from '@fortawesome/free-solid-svg-icons/faSquareCheck';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
@@ -6,7 +13,7 @@ import CompaniesStack from './src/screens/Companies';
 import CompareScreen from './src/screens/CompareScreen';
 import { RootParamList } from './src/types';
 
-
+library.add(faB, faSquareCheck, faBeerMugEmpty, faArrowLeftLong);
 
 const Tab = createBottomTabNavigator<RootParamList>();
 

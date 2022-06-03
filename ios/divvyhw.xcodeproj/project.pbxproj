@@ -23,6 +23,22 @@
 		35F90E062848390E0068ED8C /* CompanyGraphViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F90E052848390E0068ED8C /* CompanyGraphViewManager.m */; };
 		7699B88040F8A987B510C191 /* libPods-divvyhw-divvyhwTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-divvyhw-divvyhwTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		19429FF355A14A249A3630A8 /* RobotoMono-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A8860BF2C3B42E89B26D3FD /* RobotoMono-Italic-VariableFont_wght.ttf */; };
+		B69F0790D04B483C83F8EC93 /* RobotoMono-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD02CD36D98F4DFF9926320D /* RobotoMono-VariableFont_wght.ttf */; };
+		6D0B3D7310774BF5B8FC09EE /* test-calibre-black-italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 82EDFE9A7B554152BD15641A /* test-calibre-black-italic.woff2 */; };
+		75BE037B5D8C4BA690C90C69 /* test-calibre-black.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 95525C7163F1467CAE1241D0 /* test-calibre-black.woff2 */; };
+		C4412EF224A94CD3B73781C6 /* test-calibre-bold-italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = D6F2200260224044A2457854 /* test-calibre-bold-italic.woff2 */; };
+		B1EF82727CE64262AED8BD7C /* test-calibre-bold.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 637D29BBDDF3465F81E1F39D /* test-calibre-bold.woff2 */; };
+		144BD46E48AB4708AF88AC87 /* test-calibre-light-italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 9BFA51CE0DD74CBBB25A3430 /* test-calibre-light-italic.woff2 */; };
+		3B5ABF314B3C4CAEA5BB171C /* test-calibre-light.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 5CC74B19B9B942A695304404 /* test-calibre-light.woff2 */; };
+		1E99ED8093D54C57900022E9 /* test-calibre-medium-italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 9819110790CA44DCA138961A /* test-calibre-medium-italic.woff2 */; };
+		23242E5BBEA54D75B0CAB8BD /* test-calibre-medium.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = A9F5915D13874A3C8F2E73F2 /* test-calibre-medium.woff2 */; };
+		FEAADAA09E6B414D905FABA2 /* test-calibre-regular-italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 2A342B13CFAD4B81B3D68105 /* test-calibre-regular-italic.woff2 */; };
+		79E44D75B7394123B69C282F /* test-calibre-regular.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 14C1C7034076468C83B44C16 /* test-calibre-regular.woff2 */; };
+		4169C5A12AE549918BA7CABF /* test-calibre-semibold-italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 717416089B5B4B7FAC3382FA /* test-calibre-semibold-italic.woff2 */; };
+		94474E1613E94D8CB34B90E0 /* test-calibre-semibold.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 5BD989DEB1FB4BFEBD0F1AE9 /* test-calibre-semibold.woff2 */; };
+		5B85E2D4697D4476B2203C68 /* test-calibre-thin-italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 4D1267A1C541495AB5D1F89F /* test-calibre-thin-italic.woff2 */; };
+		AE24A5B08EE04002B3EDF7D1 /* test-calibre-thin.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 41850B5AB64C46648CADCD4D /* test-calibre-thin.woff2 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +80,22 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = divvyhw/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-divvyhw-divvyhwTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-divvyhw-divvyhwTests.release.xcconfig"; path = "Target Support Files/Pods-divvyhw-divvyhwTests/Pods-divvyhw-divvyhwTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		8A8860BF2C3B42E89B26D3FD /* RobotoMono-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; name = "RobotoMono-Italic-VariableFont_wght.ttf"; path = "../assets/fonts/RobotoMono-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DD02CD36D98F4DFF9926320D /* RobotoMono-VariableFont_wght.ttf */ = {isa = PBXFileReference; name = "RobotoMono-VariableFont_wght.ttf"; path = "../assets/fonts/RobotoMono-VariableFont_wght.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		82EDFE9A7B554152BD15641A /* test-calibre-black-italic.woff2 */ = {isa = PBXFileReference; name = "test-calibre-black-italic.woff2"; path = "../assets/fonts/test-calibre-black-italic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		95525C7163F1467CAE1241D0 /* test-calibre-black.woff2 */ = {isa = PBXFileReference; name = "test-calibre-black.woff2"; path = "../assets/fonts/test-calibre-black.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D6F2200260224044A2457854 /* test-calibre-bold-italic.woff2 */ = {isa = PBXFileReference; name = "test-calibre-bold-italic.woff2"; path = "../assets/fonts/test-calibre-bold-italic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		637D29BBDDF3465F81E1F39D /* test-calibre-bold.woff2 */ = {isa = PBXFileReference; name = "test-calibre-bold.woff2"; path = "../assets/fonts/test-calibre-bold.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9BFA51CE0DD74CBBB25A3430 /* test-calibre-light-italic.woff2 */ = {isa = PBXFileReference; name = "test-calibre-light-italic.woff2"; path = "../assets/fonts/test-calibre-light-italic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5CC74B19B9B942A695304404 /* test-calibre-light.woff2 */ = {isa = PBXFileReference; name = "test-calibre-light.woff2"; path = "../assets/fonts/test-calibre-light.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9819110790CA44DCA138961A /* test-calibre-medium-italic.woff2 */ = {isa = PBXFileReference; name = "test-calibre-medium-italic.woff2"; path = "../assets/fonts/test-calibre-medium-italic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A9F5915D13874A3C8F2E73F2 /* test-calibre-medium.woff2 */ = {isa = PBXFileReference; name = "test-calibre-medium.woff2"; path = "../assets/fonts/test-calibre-medium.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2A342B13CFAD4B81B3D68105 /* test-calibre-regular-italic.woff2 */ = {isa = PBXFileReference; name = "test-calibre-regular-italic.woff2"; path = "../assets/fonts/test-calibre-regular-italic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		14C1C7034076468C83B44C16 /* test-calibre-regular.woff2 */ = {isa = PBXFileReference; name = "test-calibre-regular.woff2"; path = "../assets/fonts/test-calibre-regular.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		717416089B5B4B7FAC3382FA /* test-calibre-semibold-italic.woff2 */ = {isa = PBXFileReference; name = "test-calibre-semibold-italic.woff2"; path = "../assets/fonts/test-calibre-semibold-italic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5BD989DEB1FB4BFEBD0F1AE9 /* test-calibre-semibold.woff2 */ = {isa = PBXFileReference; name = "test-calibre-semibold.woff2"; path = "../assets/fonts/test-calibre-semibold.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4D1267A1C541495AB5D1F89F /* test-calibre-thin-italic.woff2 */ = {isa = PBXFileReference; name = "test-calibre-thin-italic.woff2"; path = "../assets/fonts/test-calibre-thin-italic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		41850B5AB64C46648CADCD4D /* test-calibre-thin.woff2 */ = {isa = PBXFileReference; name = "test-calibre-thin.woff2"; path = "../assets/fonts/test-calibre-thin.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +212,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				87D61AA790AC47F1B24072B5 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -205,6 +238,30 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		87D61AA790AC47F1B24072B5 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				8A8860BF2C3B42E89B26D3FD /* RobotoMono-Italic-VariableFont_wght.ttf */,
+				DD02CD36D98F4DFF9926320D /* RobotoMono-VariableFont_wght.ttf */,
+				82EDFE9A7B554152BD15641A /* test-calibre-black-italic.woff2 */,
+				95525C7163F1467CAE1241D0 /* test-calibre-black.woff2 */,
+				D6F2200260224044A2457854 /* test-calibre-bold-italic.woff2 */,
+				637D29BBDDF3465F81E1F39D /* test-calibre-bold.woff2 */,
+				9BFA51CE0DD74CBBB25A3430 /* test-calibre-light-italic.woff2 */,
+				5CC74B19B9B942A695304404 /* test-calibre-light.woff2 */,
+				9819110790CA44DCA138961A /* test-calibre-medium-italic.woff2 */,
+				A9F5915D13874A3C8F2E73F2 /* test-calibre-medium.woff2 */,
+				2A342B13CFAD4B81B3D68105 /* test-calibre-regular-italic.woff2 */,
+				14C1C7034076468C83B44C16 /* test-calibre-regular.woff2 */,
+				717416089B5B4B7FAC3382FA /* test-calibre-semibold-italic.woff2 */,
+				5BD989DEB1FB4BFEBD0F1AE9 /* test-calibre-semibold.woff2 */,
+				4D1267A1C541495AB5D1F89F /* test-calibre-thin-italic.woff2 */,
+				41850B5AB64C46648CADCD4D /* test-calibre-thin.woff2 */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -302,6 +359,22 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				19429FF355A14A249A3630A8 /* RobotoMono-Italic-VariableFont_wght.ttf in Resources */,
+				B69F0790D04B483C83F8EC93 /* RobotoMono-VariableFont_wght.ttf in Resources */,
+				6D0B3D7310774BF5B8FC09EE /* test-calibre-black-italic.woff2 in Resources */,
+				75BE037B5D8C4BA690C90C69 /* test-calibre-black.woff2 in Resources */,
+				C4412EF224A94CD3B73781C6 /* test-calibre-bold-italic.woff2 in Resources */,
+				B1EF82727CE64262AED8BD7C /* test-calibre-bold.woff2 in Resources */,
+				144BD46E48AB4708AF88AC87 /* test-calibre-light-italic.woff2 in Resources */,
+				3B5ABF314B3C4CAEA5BB171C /* test-calibre-light.woff2 in Resources */,
+				1E99ED8093D54C57900022E9 /* test-calibre-medium-italic.woff2 in Resources */,
+				23242E5BBEA54D75B0CAB8BD /* test-calibre-medium.woff2 in Resources */,
+				FEAADAA09E6B414D905FABA2 /* test-calibre-regular-italic.woff2 in Resources */,
+				79E44D75B7394123B69C282F /* test-calibre-regular.woff2 in Resources */,
+				4169C5A12AE549918BA7CABF /* test-calibre-semibold-italic.woff2 in Resources */,
+				94474E1613E94D8CB34B90E0 /* test-calibre-semibold.woff2 in Resources */,
+				5B85E2D4697D4476B2203C68 /* test-calibre-thin-italic.woff2 in Resources */,
+				AE24A5B08EE04002B3EDF7D1 /* test-calibre-thin.woff2 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
