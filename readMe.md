@@ -1,6 +1,6 @@
 # Divvy HW For Mobile Software Engineer Position
 
-Hello there! Here is repo for the homework assignment. I had intially wanted to do a bunch of fancy stuff with react-native-renanimated2, but I opted to focus on:
+Hello there! Here is the repo for the homework assignment. I had initially wanted to do a bunch of fancy stuff with react-native-renanimated2, but I opted to focus on:
 
 - Creating one customizable Line Graph and use it in 3 different situations.
 - Ability to add any number of data sets AND chart options to configure options like color.
