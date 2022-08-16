@@ -69,6 +69,7 @@ const CompanyDetailScreen = ({
   ];
 
   const onValueTouch = (e: { nativeEvent: { x: number; y: number } }) => {
+    console.log('bbb', e.nativeEvent);
     const seq = e.nativeEvent.x / 100;
     const key = [5, 4, 3, 2, 1, 0];
     setSelectedSeq(key[seq]);

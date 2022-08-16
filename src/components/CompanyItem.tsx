@@ -11,15 +11,15 @@ interface CompanyItemProps extends CompanyProps {
 }
 
 export const CompanyItem = (props: CompanyItemProps) => {
+  const color =
+    props.revenue[0].value > props.revenue[5].value ? '#189E6C' : '#F70000';
+
   const data = [
     {
       ...props,
       graphOptions: {
         drawFilledEnabled: true,
-        color:
-          props.revenue[0].value > props.revenue[5].value
-            ? '#189E6C'
-            : '#F70000',
+        color,
       },
     },
   ];
